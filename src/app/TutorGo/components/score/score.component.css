@@ -1,0 +1,33 @@
+
+.mat-tab-group {
+  display: flex;
+}
+
+
+.mat-tab-group .mat-tab-labels {
+  flex: 1;
+}
+
+
+.mat-tab-body-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.mat-tab-body-content .general {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+
+.mat-tab-body-content .type,
+.mat-tab-body-content .date,
+.mat-tab-body-content .score {
+  margin-right: 10px;
+}
+::ng-deep .mat-tab-label {
+  color: black;
+  margin: 10px;
+}

@@ -1,0 +1,41 @@
+<mat-tab-group>
+  <mat-tab label="All">
+    <ng-container *ngFor="let score of getScores('All')">
+      <div class="general">
+        <div class="type">{{ score.type }}</div>
+        <div class="date">{{ formatDate(score.date) }}</div>
+        <div class="score">{{ score.scoreValue }}</div>
+      </div>
+    </ng-container>
+    <div class="total">
+      <div class="total-label">Total</div>
+      <div class="total-value">{{ calculateUserTotal('All') }}</div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Graded">
+    <ng-container *ngFor="let score of getScores('Graded')">
+      <div class="general">
+        <div class="type">{{ score.type }}</div>
+        <div class="date">{{ formatDate(score.date) }}</div>
+        <div class="score">{{ score.scoreValue }}</div>
+      </div>
+    </ng-container>
+    <div class="total">
+      <div class="total-label">Total</div>
+      <div class="total-value">{{ calculateUserTotal('Graded') }}</div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Submitted">
+    <ng-container *ngFor="let score of getScores('Submitted')">
+      <div class="general">
+        <div class="type">{{ score.type }}</div>
+        <div class="date">{{ formatDate(score.date) }}</div>
+        <div class="score">{{ score.scoreValue }}</div>
+      </div>
+    </ng-container>
+    <div class="total">
+      <div class="total-label">Total</div>
+      <div class="total-value">{{ calculateUserTotal('Submitted') }}</div>
+    </div>
+  </mat-tab>
+</mat-tab-group>
