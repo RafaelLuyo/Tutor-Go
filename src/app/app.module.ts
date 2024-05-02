@@ -39,6 +39,7 @@ import {
 import { ListTutorComponent } from './TutorGo/students/components/list-tutor/list-tutor.component';
 import { ChatComponent } from './TutorGo/students/components/chat/chat.component';
 import{RoleComponent} from "./TutorGo/components/role/role.component";
+import{PageNotFoundComponent} from "./TutorGo/components/page-not-found/page-not-found.component";
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import{RoleComponent} from "./TutorGo/components/role/role.component";
     ShowProfileTutorComponent,
     ListTutorComponent,
     ChatComponent,
-    RoleComponent
+    RoleComponent,
+    PageNotFoundComponent
   ],
   imports: [
     HttpClientModule,

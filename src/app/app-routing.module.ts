@@ -13,6 +13,7 @@ import {ShowProfileTutorComponent} from "./TutorGo/tutors/components/show-profil
 import{ListTutorComponent} from "./TutorGo/students/components/list-tutor/list-tutor.component";
 import{ChatComponent} from "./TutorGo/students/components/chat/chat.component";
 import{RoleComponent} from "./TutorGo/components/role/role.component";
+import {PageNotFoundComponent} from "./TutorGo/components/page-not-found/page-not-found.component";
 
 const routes: Routes = [
   { path: 'score/:id', component: ScoreComponent },
@@ -27,6 +28,8 @@ const routes: Routes = [
   { path: 'list-tutor', component: ListTutorComponent},
   { path: 'chat', component: ChatComponent},
   { path: 'role', component: RoleComponent},
+  {path: '', redirectTo: 'student-home', pathMatch: 'full'},
+  {path: '**', component: PageNotFoundComponent},
   {path:'show-profile-tutor', component:ShowProfileTutorComponent}
 ];
 
