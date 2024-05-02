@@ -38,6 +38,7 @@ import {
 } from "@angular/material/table";
 import { ListTutorComponent } from './TutorGo/students/components/list-tutor/list-tutor.component';
 import { ChatComponent } from './TutorGo/students/components/chat/chat.component';
+import{RoleComponent} from "./TutorGo/components/role/role.component";
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { ChatComponent } from './TutorGo/students/components/chat/chat.component
     EditProfileTutorComponent,
     ShowProfileTutorComponent,
     ListTutorComponent,
-    ChatComponent
+    ChatComponent,
+    RoleComponent
   ],
   imports: [
     HttpClientModule,

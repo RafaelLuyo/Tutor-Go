@@ -12,6 +12,7 @@ import {EditProfileTutorComponent} from "./TutorGo/tutors/components/edit-profil
 import {ShowProfileTutorComponent} from "./TutorGo/tutors/components/show-profile-tutor/show-profile-tutor.component";
 import{ListTutorComponent} from "./TutorGo/students/components/list-tutor/list-tutor.component";
 import{ChatComponent} from "./TutorGo/students/components/chat/chat.component";
+import{RoleComponent} from "./TutorGo/components/role/role.component";
 
 const routes: Routes = [
   { path: 'score/:id', component: ScoreComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'edit-profile-tutor', component: EditProfileTutorComponent},
   { path: 'list-tutor', component: ListTutorComponent},
   { path: 'chat', component: ChatComponent},
+  { path: 'role', component: RoleComponent},
   {path:'show-profile-tutor', component:ShowProfileTutorComponent}
 ];
 
