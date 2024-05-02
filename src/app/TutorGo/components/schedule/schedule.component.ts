@@ -1,20 +1,29 @@
-import {Component, OnInit} from '@angular/core';
-import {ScheduleService} from "../../../shared/services/schedule/schedule.service";
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ScheduleService } from '../../../shared/services/schedule/schedule.service';
 
 @Component({
   selector: 'app-schedule',
   templateUrl: './schedule.component.html',
-  styleUrl: './schedule.component.css'
+  styleUrls: ['./schedule.component.css']
 })
-export class ScheduleComponent implements OnInit{
+export class ScheduleComponent implements OnInit {
   schedules: any[] = [];
-  idTutor: number = 1;
+  idTutor!: number;
 
-  constructor(private scheduleService: ScheduleService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private scheduleService: ScheduleService
+  ) { }
 
   ngOnInit(): void {
-    this.scheduleService.getAll().subscribe((response: any) => {
-      this.schedules = response.filter((schedule: any) => schedule.idTutor === this.idTutor);
+
+    this.route.params.subscribe(params => {
+      this.idTutor = +params['idTutor'];
+
+      this.scheduleService.getAll().subscribe((response: any) => {
+        this.schedules = response.filter((schedule: any) => schedule.idTutor === this.idTutor);
+      });
     });
   }
 }

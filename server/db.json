@@ -39,7 +39,7 @@
       "idTutor": 1,
       "days": "Monday",
       "time": "10:00 AM",
-      "TutorName": "John Doe",
+      "TutorName": "Tomas Shelby",
       "price": 50
     },
     {
@@ -47,9 +47,34 @@
       "idTutor": 1,
       "days": "Tuesday",
       "time": "2:00 PM",
-      "TutorName": "Jane Smith",
+      "TutorName": "Tomas Shelby",
       "price": 60
+    },
+    {
+      "id": 3,
+      "idTutor": 1,
+      "days": "Wednesday",
+      "time": "7:00 PM",
+      "TutorName": "Tomas Shelby",
+      "price": 45
+    },
+    {
+      "id": 4,
+      "idTutor": 2,
+      "days": "Wednesday",
+      "time": "10:00 AM",
+      "TutorName": "Penelope Cruz",
+      "price": 89.90
+    },
+    {
+      "id": 5,
+      "idTutor": 2,
+      "days": "Thursday",
+      "time": "06:00 PM",
+      "TutorName": "Penelope Cruz",
+      "price": 43.90
     }
+
 
   ]
 }

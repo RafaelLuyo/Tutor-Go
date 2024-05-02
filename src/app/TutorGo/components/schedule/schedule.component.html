@@ -1,26 +1,18 @@
+<div class="max-w-lg mx-auto p-6 bg-white shadow-md">
+  <h2 class="text-2xl font-bold mb-4">Make your schedule</h2>
+  <p class="text-lg mb-6">These are all available for this tutor</p>
 
-<div class="container">
-  <h1>{{ 'Schedule' }}</h1>
-</div>
-<div class="sub-title">
-  <h2>{{ 'Available schedules' }}</h2>
-</div>
-<div class="card">
-  <mat-card *ngFor="let schedule of schedules">
-    <div class="content">
-      <div class="pv-card-col">
-        <h2>{{ schedule.days }}</h2>
-        <h2>{{ schedule.time }}</h2>
+  <div class="space-y-4">
+    <div *ngFor="let schedule of schedules" class="flex items-center p-4 border rounded-lg">
+      <div>
+        <p class="font-semibold">{{ schedule.days }}</p>
+        <p>{{ schedule.time }}</p>
       </div>
-      <div class="pv-card-col">
-        <h2>{{ schedule.TutorName }}</h2>
-        <h2>{{ schedule.price }}</h2>
+      <div class="ml-4">
+        <p>{{ schedule.TutorName }}</p>
+        <p>S/ {{ schedule.price }}</p>
       </div>
-      <div class="pv-card-col">
-        <button mat-button color="#28859A ">
-          {{ 'GoPayment' }}
-        </button>
-      </div>
+      <button mat-raised-button color="primary" class="ml-auto">Go to payment</button>
     </div>
-  </mat-card>
+   </div>
 </div>
