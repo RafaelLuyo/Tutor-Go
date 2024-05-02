@@ -23,6 +23,8 @@ import {
   TutorSeleccionadoComponent
 } from "./TutorGo/students/components/tutor-seleccionado/tutor-seleccionado.component";
 import {EditProfileComponent} from "./TutorGo/students/components/edit-profile/edit-profile.component";
+import {ShowProfileComponent} from "./TutorGo/students/components/show-profile/show-profile.component";
+import {MatInput} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import {EditProfileComponent} from "./TutorGo/students/components/edit-profile/e
     ValoracionesComponent,
     TutorSeleccionadoComponent,
     HomeComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    ShowProfileComponent
   ],
   imports: [
     HttpClientModule,
@@ -59,7 +62,8 @@ import {EditProfileComponent} from "./TutorGo/students/components/edit-profile/e
     MatCardHeader,
     MatCardSubtitle,
     MatCardModule,
-    MatCardActions
+    MatCardActions,
+    MatInput
   ],
   providers: [
     provideAnimationsAsync(),
