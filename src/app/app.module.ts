@@ -36,6 +36,7 @@ import {
   MatHeaderRow, MatHeaderRowDef, MatRow, MatRowDef,
   MatTable
 } from "@angular/material/table";
+import { ListTutorComponent } from './TutorGo/students/components/list-tutor/list-tutor.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import {
     EditProfileComponent,
     ShowProfileComponent,
     EditProfileTutorComponent,
-    ShowProfileTutorComponent
+    ShowProfileTutorComponent,
+    ListTutorComponent
   ],
   imports: [
     HttpClientModule,
