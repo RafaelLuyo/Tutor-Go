@@ -1,0 +1,55 @@
+{
+  "scores": [
+    {
+      "id": 1,
+      "studentId": 1,
+      "type": "Math",
+      "date": "2024-04-28",
+      "scoreValue": "85/100",
+      "status": "GRADED"
+    },
+    {
+      "id": 2,
+      "studentId": 1,
+      "type": "Science",
+      "date": "2024-04-27",
+      "scoreValue": "90/100",
+      "status": "GRADED"
+    },
+    {
+      "id": 3,
+      "studentId": 2,
+      "type": "Math",
+      "date": "2024-04-28",
+      "scoreValue": "88/100",
+      "status": "SUBMITTED"
+    },
+    {
+      "id": 4,
+      "studentId": 2,
+      "type": "Science",
+      "date": "2024-04-27",
+      "scoreValue": "92/100",
+      "status": "SUBMITTED"
+    }
+  ],
+  "schedules": [
+    {
+      "id": 1,
+      "idTutor": 1,
+      "days": "Monday",
+      "time": "10:00 AM",
+      "TutorName": "John Doe",
+      "price": 50
+    },
+    {
+      "id": 2,
+      "idTutor": 1,
+      "days": "Tuesday",
+      "time": "2:00 PM",
+      "TutorName": "Jane Smith",
+      "price": 60
+    }
+
+  ]
+}

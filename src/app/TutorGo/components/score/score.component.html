@@ -1,0 +1,24 @@
+<mat-tab-group class="tab-group">
+  <mat-tab *ngFor="let tab of tabs" label="{{tab.title}}">
+    <div class="header">
+      <div class="column">Type</div>
+      <div class="column">Date</div>
+      <div class="column">Score</div>
+      <div class="column">Status</div>
+    </div>
+    <div class="score-column" *ngFor="let score of getScores(tab.title)">
+      <div class="score-card">
+        <div class="column">{{score.type}}</div>
+        <div class="column">{{formatDate(score.date)}}</div>
+        <div class="column">{{score.scoreValue}}</div>
+        <div class="column">{{score.status}}</div>
+      </div>
+    </div>
+    <div class="total">
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column">{{ calculateUserTotal(tab.title) }}</div>
+    </div>
+  </mat-tab>
+</mat-tab-group>
