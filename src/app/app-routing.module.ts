@@ -9,7 +9,7 @@ import {TutorSeleccionadoComponent} from "./TutorGo/students/components/tutor-se
 
 const routes: Routes = [
   { path: 'score', component: ScoreComponent},
-  { path: 'schedule', component: ScheduleComponent},
+  { path: 'schedule/:idTutor', component: ScheduleComponent},
   { path: 'calendar', component: CalendarComponent},
   { path: 'student-home', component:HomeComponent},
   { path: 'student-valoraciones', component:ValoracionesComponent},
