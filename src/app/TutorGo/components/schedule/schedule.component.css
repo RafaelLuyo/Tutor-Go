@@ -1,0 +1,31 @@
+
+.container {
+  display: grid;
+  place-items: center;
+  margin: auto;
+  background-color: #ffffff;
+}
+
+.sub-title {
+  padding-left: 60px;
+}
+
+.card, .mat-card {
+  padding: 20px;
+  background-color: #ffffff !important;
+}
+
+.mat-button {
+  background-color: #28859A !important;
+  border-color: #28859A !important;
+  color: #ffffff !important;
+  border-radius: 15px;
+}
+.content {
+  display: flex;
+}
+
+.pv-card-col {
+  margin-right: 250px;
+}
+

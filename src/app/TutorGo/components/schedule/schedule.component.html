@@ -1,0 +1,26 @@
+
+<div class="container">
+  <h1>{{ 'Schedule' }}</h1>
+</div>
+<div class="sub-title">
+  <h2>{{ 'Available schedules' }}</h2>
+</div>
+<div class="card">
+  <mat-card *ngFor="let schedule of schedules">
+    <div class="content">
+      <div class="pv-card-col">
+        <h2>{{ schedule.days }}</h2>
+        <h2>{{ schedule.time }}</h2>
+      </div>
+      <div class="pv-card-col">
+        <h2>{{ schedule.TutorName }}</h2>
+        <h2>{{ schedule.price }}</h2>
+      </div>
+      <div class="pv-card-col">
+        <button mat-button color="#28859A ">
+          {{ 'GoPayment' }}
+        </button>
+      </div>
+    </div>
+  </mat-card>
+</div>
