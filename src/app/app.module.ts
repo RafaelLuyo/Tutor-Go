@@ -13,7 +13,7 @@ import {MatIcon} from "@angular/material/icon";
 import {MatListItem, MatNavList} from "@angular/material/list";
 import {MatButton, MatIconButton} from "@angular/material/button";
 import {MatToolbar} from "@angular/material/toolbar";
-import { ScheduleComponent } from './tutorgo/components/schedule/schedule.component';
+import { ScheduleComponent} from "./TutorGo/components/schedule/schedule.component";
 import {MatCard} from "@angular/material/card";
 
 @NgModule({
