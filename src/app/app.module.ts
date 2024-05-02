@@ -26,6 +26,15 @@ import {EditProfileComponent} from "./TutorGo/students/components/edit-profile/e
 import {ShowProfileComponent} from "./TutorGo/students/components/show-profile/show-profile.component";
 import {EditProfileTutorComponent} from "./TutorGo/tutors/components/edit-profile-tutor/edit-profile-tutor.component";
 import {MatInput} from "@angular/material/input";
+import {
+  MatCell,
+  MatCellDef,
+  MatColumnDef,
+  MatHeaderCell,
+  MatHeaderCellDef,
+  MatHeaderRow, MatHeaderRowDef, MatRow, MatRowDef,
+  MatTable
+} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -65,7 +74,17 @@ import {MatInput} from "@angular/material/input";
     MatCardSubtitle,
     MatCardModule,
     MatCardActions,
-    MatInput
+    MatInput,
+    MatTable,
+    MatColumnDef,
+    MatHeaderCell,
+    MatHeaderCellDef,
+    MatCellDef,
+    MatCell,
+    MatHeaderRow,
+    MatHeaderRowDef,
+    MatRowDef,
+    MatRow
   ],
   providers: [
     provideAnimationsAsync(),

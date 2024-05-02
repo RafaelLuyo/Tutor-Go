@@ -11,7 +11,7 @@ import {ShowProfileComponent} from "./TutorGo/students/components/show-profile/s
 import {EditProfileTutorComponent} from "./TutorGo/tutors/components/edit-profile-tutor/edit-profile-tutor.component";
 
 const routes: Routes = [
-  { path: 'score', component: ScoreComponent},
+  { path: 'score/:id', component: ScoreComponent },
   { path: 'schedule/:idTutor', component: ScheduleComponent},
   { path: 'calendar', component: CalendarComponent},
   { path: 'student-home', component:HomeComponent},
