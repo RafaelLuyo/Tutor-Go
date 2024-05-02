@@ -13,9 +13,10 @@ import {MatListItem, MatNavList} from "@angular/material/list";
 import {MatButton, MatIconButton} from "@angular/material/button";
 import {MatToolbar} from "@angular/material/toolbar";
 import { ScheduleComponent} from "./TutorGo/components/schedule/schedule.component";
-import {MatCard} from "@angular/material/card";
+import {MatCard, MatCardContent} from "@angular/material/card";
 import {ScheduleModule,RecurrenceEditorModule,DayService,WeekService,WorkWeekService,MonthService,MonthAgendaService} from "@syncfusion/ej2-angular-schedule";
 import { CalendarComponent} from "./TutorGo/components/calendar/calendar.component";
+import {HomeComponent} from "./TutorGo/students/components/home/home.component";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CalendarComponent} from "./TutorGo/components/calendar/calendar.compone
     ScoreComponent,
     HeaderComponent,
     ScheduleComponent,
-    CalendarComponent
+    CalendarComponent,
+    HomeComponent
   ],
   imports: [
     HttpClientModule,
@@ -43,7 +45,8 @@ import { CalendarComponent} from "./TutorGo/components/calendar/calendar.compone
     MatSidenav,
     MatCard,
     ScheduleModule,
-    RecurrenceEditorModule
+    RecurrenceEditorModule,
+    MatCardContent
   ],
   providers: [
     provideAnimationsAsync(),
