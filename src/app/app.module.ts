@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {HomeComponent} from "./TutorGo/Students/components/home/home.component";
 import { ScoreComponent} from "./TutorGo/components/score/score.component";
 import {MatTab, MatTabGroup} from "@angular/material/tabs";
 import {HttpClientModule} from "@angular/common/http";
@@ -14,7 +15,7 @@ import {MatListItem, MatNavList} from "@angular/material/list";
 import {MatButton, MatIconButton} from "@angular/material/button";
 import {MatToolbar} from "@angular/material/toolbar";
 import { ScheduleComponent} from "./TutorGo/components/schedule/schedule.component";
-import {MatCard} from "@angular/material/card";
+import {MatCard, MatCardContent} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import {MatCard} from "@angular/material/card";
     AppComponent,
     ScoreComponent,
     HeaderComponent,
+    HomeComponent,
     ScheduleComponent
   ],
   imports: [
@@ -39,7 +41,8 @@ import {MatCard} from "@angular/material/card";
     MatToolbar,
     MatButton,
     MatSidenav,
-    MatCard
+    MatCard,
+    MatCardContent
   ],
   providers: [
     provideAnimationsAsync()
