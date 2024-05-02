@@ -26,6 +26,7 @@ import {EditProfileComponent} from "./TutorGo/students/components/edit-profile/e
 import {ShowProfileComponent} from "./TutorGo/students/components/show-profile/show-profile.component";
 import {EditProfileTutorComponent} from "./TutorGo/tutors/components/edit-profile-tutor/edit-profile-tutor.component";
 import {MatInput} from "@angular/material/input";
+import {ShowProfileTutorComponent} from "./TutorGo/tutors/components/show-profile-tutor/show-profile-tutor.component";
 import {
   MatCell,
   MatCellDef,
@@ -50,6 +51,7 @@ import {
     EditProfileComponent,
     ShowProfileComponent,
     EditProfileTutorComponent,
+    ShowProfileTutorComponent
   ],
   imports: [
     HttpClientModule,

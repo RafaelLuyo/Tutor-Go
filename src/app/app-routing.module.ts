@@ -9,6 +9,7 @@ import {TutorSeleccionadoComponent} from "./TutorGo/students/components/tutor-se
 import {EditProfileComponent} from "./TutorGo/students/components/edit-profile/edit-profile.component";
 import {ShowProfileComponent} from "./TutorGo/students/components/show-profile/show-profile.component";
 import {EditProfileTutorComponent} from "./TutorGo/tutors/components/edit-profile-tutor/edit-profile-tutor.component";
+import {ShowProfileTutorComponent} from "./TutorGo/tutors/components/show-profile-tutor/show-profile-tutor.component";
 
 const routes: Routes = [
   { path: 'score/:id', component: ScoreComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'edit-profile', component: EditProfileComponent },
   { path: 'show-profile', component: ShowProfileComponent},
   { path: 'edit-profile-tutor', component: EditProfileTutorComponent},
+  {path:'show-profile-tutor', component:ShowProfileTutorComponent}
 ];
 
 @NgModule({
