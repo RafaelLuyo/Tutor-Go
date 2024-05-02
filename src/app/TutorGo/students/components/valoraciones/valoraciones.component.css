@@ -1,0 +1,47 @@
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.max-width-lg {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.star {
+  font-size: 24px;
+  color: #FFD700;
+}
+
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.review-container {
+  border-top: 2px solid #DCDCDC;
+  padding-top: 20px;
+}
+
+.review {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.review .content {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.review .name {
+  font-weight: bold;
+}
