@@ -25,6 +25,7 @@ import {
 import {EditProfileComponent} from "./TutorGo/students/components/edit-profile/edit-profile.component";
 import {ShowProfileComponent} from "./TutorGo/students/components/show-profile/show-profile.component";
 import {EditProfileTutorComponent} from "./TutorGo/tutors/components/edit-profile-tutor/edit-profile-tutor.component";
+import {ListTutorComponent} from "./TutorGo/tutors/components/list-tutor/list-tutor.component";
 import {MatInput} from "@angular/material/input";
 import {
   MatCell,
@@ -35,6 +36,7 @@ import {
   MatHeaderRow, MatHeaderRowDef, MatRow, MatRowDef,
   MatTable
 } from "@angular/material/table";
+
 
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ import {
     EditProfileComponent,
     ShowProfileComponent,
     EditProfileTutorComponent,
+ListTutorComponent,
   ],
   imports: [
     HttpClientModule,
