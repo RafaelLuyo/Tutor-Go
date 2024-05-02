@@ -5,6 +5,7 @@ import {ScheduleComponent} from "./TutorGo/components/schedule/schedule.componen
 import {CalendarComponent} from "./TutorGo/components/calendar/calendar.component";
 import {HomeComponent} from "./TutorGo/students/components/home/home.component";
 import {ValoracionesComponent} from "./TutorGo/students/components/valoraciones/valoraciones.component";
+import {TutorSeleccionadoComponent} from "./TutorGo/students/components/tutor-seleccionado/tutor-seleccionado.component";
 
 const routes: Routes = [
   { path: 'score', component: ScoreComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'calendar', component: CalendarComponent},
   { path: 'student-home', component:HomeComponent},
   { path: 'student-valoraciones', component:ValoracionesComponent},
+  { path: 'tutor-seleccionado', component:TutorSeleccionadoComponent},
 ];
 
 @NgModule({
