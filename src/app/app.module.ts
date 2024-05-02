@@ -24,6 +24,7 @@ import {
 } from "./TutorGo/students/components/tutor-seleccionado/tutor-seleccionado.component";
 import {EditProfileComponent} from "./TutorGo/students/components/edit-profile/edit-profile.component";
 import {ShowProfileComponent} from "./TutorGo/students/components/show-profile/show-profile.component";
+import {EditProfileTutorComponent} from "./TutorGo/tutors/components/edit-profile-tutor/edit-profile-tutor.component";
 import {MatInput} from "@angular/material/input";
 
 @NgModule({
@@ -38,7 +39,8 @@ import {MatInput} from "@angular/material/input";
     TutorSeleccionadoComponent,
     HomeComponent,
     EditProfileComponent,
-    ShowProfileComponent
+    ShowProfileComponent,
+    EditProfileTutorComponent,
   ],
   imports: [
     HttpClientModule,
