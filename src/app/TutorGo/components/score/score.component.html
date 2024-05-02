@@ -1,41 +1,24 @@
-<mat-tab-group>
-  <mat-tab label="All">
-    <ng-container *ngFor="let score of getScores('All')">
-      <div class="general">
-        <div class="type">{{ score.type }}</div>
-        <div class="date">{{ formatDate(score.date) }}</div>
-        <div class="score">{{ score.scoreValue }}</div>
-      </div>
-    </ng-container>
-    <div class="total">
-      <div class="total-label">Total</div>
-      <div class="total-value">{{ calculateUserTotal('All') }}</div>
+<mat-tab-group class="tab-group">
+  <mat-tab *ngFor="let tab of tabs" label="{{tab.title}}">
+    <div class="header">
+      <div class="column">Type</div>
+      <div class="column">Date</div>
+      <div class="column">Score</div>
+      <div class="column">Status</div>
     </div>
-  </mat-tab>
-  <mat-tab label="Graded">
-    <ng-container *ngFor="let score of getScores('Graded')">
-      <div class="general">
-        <div class="type">{{ score.type }}</div>
-        <div class="date">{{ formatDate(score.date) }}</div>
-        <div class="score">{{ score.scoreValue }}</div>
+    <div class="score-column" *ngFor="let score of getScores(tab.title)">
+      <div class="score-card">
+        <div class="column">{{score.type}}</div>
+        <div class="column">{{formatDate(score.date)}}</div>
+        <div class="column">{{score.scoreValue}}</div>
+        <div class="column">{{score.status}}</div>
       </div>
-    </ng-container>
-    <div class="total">
-      <div class="total-label">Total</div>
-      <div class="total-value">{{ calculateUserTotal('Graded') }}</div>
     </div>
-  </mat-tab>
-  <mat-tab label="Submitted">
-    <ng-container *ngFor="let score of getScores('Submitted')">
-      <div class="general">
-        <div class="type">{{ score.type }}</div>
-        <div class="date">{{ formatDate(score.date) }}</div>
-        <div class="score">{{ score.scoreValue }}</div>
-      </div>
-    </ng-container>
     <div class="total">
-      <div class="total-label">Total</div>
-      <div class="total-value">{{ calculateUserTotal('Submitted') }}</div>
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column">{{ calculateUserTotal(tab.title) }}</div>
     </div>
   </mat-tab>
 </mat-tab-group>

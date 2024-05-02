@@ -10,14 +10,14 @@ export class ScoreService {
   constructor(private http: HttpClient) { }
 
   getById(id: number) {
-    return this.http.get<any>(`${this.baseUrl}Score/scores/student/${id}`);
+    return this.http.get<any>(`${this.baseUrl}scores/scores/student/${id}`);
   }
 
   getAll() {
-    return this.http.get<any[]>(`${this.baseUrl}Score`);
+    return this.http.get<any[]>(`${this.baseUrl}scores`);
   }
 
   create(data: any) {
-    return this.http.post<any>(`${this.baseUrl}Score`, data);
+    return this.http.post<any>(`${this.baseUrl}scores`, data);
   }
 }

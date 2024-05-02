@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ScoreService} from "../../../shared/services/score/score.service";
+
 @Component({
   selector: 'app-score',
   templateUrl: './score.component.html',
-  styleUrl: './score.component.css'
 })
 export class ScoreComponent {
   scores: any[] = [];
@@ -71,7 +72,7 @@ export class ScoreComponent {
   }
 
   formatDate(date: string) {
-
-    return date;
+    // Implementa la lógica de formateo de fecha aquí
+    return date; // Por ahora, devuelve la fecha sin formato
   }
 }

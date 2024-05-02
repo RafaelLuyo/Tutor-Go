@@ -1,33 +1,45 @@
-
-.mat-tab-group {
-  display: flex;
+.tab-group {
+  width: 100%;
 }
 
-
-.mat-tab-group .mat-tab-labels {
-  flex: 1;
+.mat-tab-group.mat-primary {
+  background-color: #f0f0f0;
 }
 
-
-.mat-tab-body-content {
-  display: flex;
-  flex-wrap: wrap;
+.mat-tab-label {
+  font-weight: bold;
 }
 
-
-.mat-tab-body-content .general {
+.header {
   display: flex;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.score-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.score-card {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-right: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
-
-.mat-tab-body-content .type,
-.mat-tab-body-content .date,
-.mat-tab-body-content .score {
-  margin-right: 10px;
+.column {
+  flex: 1;
+  text-align: center;
 }
-::ng-deep .mat-tab-label {
-  color: black;
-  margin: 10px;
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f0f0f0;
+  font-weight: bold;
+  border-top: 1px solid #ccc;
 }
