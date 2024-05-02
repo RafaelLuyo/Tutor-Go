@@ -22,6 +22,15 @@ import { MatCardModule } from '@angular/material/card';
 import {
   TutorSeleccionadoComponent
 } from "./TutorGo/students/components/tutor-seleccionado/tutor-seleccionado.component";
+import {
+    MatCell,
+    MatCellDef,
+    MatColumnDef,
+    MatHeaderCell,
+    MatHeaderCellDef,
+    MatHeaderRow, MatHeaderRowDef, MatRow, MatRowDef,
+    MatTable
+} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -35,30 +44,40 @@ import {
     TutorSeleccionadoComponent,
     HomeComponent
   ],
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    AppRoutingModule,
-    MatTab,
-    MatTabGroup,
-    MatSidenavContent,
-    MatIcon,
-    MatListItem,
-    MatSidenavContainer,
-    MatNavList,
-    MatIconButton,
-    MatToolbar,
-    MatButton,
-    MatSidenav,
-    MatCard,
-    ScheduleModule,
-    RecurrenceEditorModule,
-    MatCardContent,
-    MatCardHeader,
-    MatCardSubtitle,
-    MatCardModule,
-    MatCardActions
-  ],
+    imports: [
+        HttpClientModule,
+        BrowserModule,
+        AppRoutingModule,
+        MatTab,
+        MatTabGroup,
+        MatSidenavContent,
+        MatIcon,
+        MatListItem,
+        MatSidenavContainer,
+        MatNavList,
+        MatIconButton,
+        MatToolbar,
+        MatButton,
+        MatSidenav,
+        MatCard,
+        ScheduleModule,
+        RecurrenceEditorModule,
+        MatCardContent,
+        MatCardHeader,
+        MatCardSubtitle,
+        MatCardModule,
+        MatCardActions,
+        MatHeaderCell,
+        MatCell,
+        MatCellDef,
+        MatHeaderCellDef,
+        MatTable,
+        MatColumnDef,
+        MatHeaderRow,
+        MatHeaderRowDef,
+        MatRowDef,
+        MatRow
+    ],
   providers: [
     provideAnimationsAsync(),
     DayService,WeekService,WorkWeekService,MonthService,MonthAgendaService

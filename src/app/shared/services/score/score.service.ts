@@ -1,23 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class ScoreService {
-  private baseUrl = 'http://localhost:3000/';
+    private baseUrl = 'http://localhost:3000/';
 
-  constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) { }
 
-  getById(id: number) {
-    return this.http.get<any>(`${this.baseUrl}scores/scores/student/${id}`);
-  }
+    getAllScores(): Observable<any[]> {
+        return this.http.get<any[]>(`${this.baseUrl}scores`);
+    }
 
-  getAll() {
-    return this.http.get<any[]>(`${this.baseUrl}scores`);
-  }
+    getScoresByStudentId(studentId: number, filter?: string) {
+        let url = `${this.baseUrl}scores?studentId=${studentId}`;
+        if (filter) {
+            url += `&status=${filter}`;
+        }
+        return this.http.get<any[]>(url);
+    }
 
-  create(data: any) {
-    return this.http.post<any>(`${this.baseUrl}scores`, data);
-  }
+
+    createScore(data: any): Observable<any> {
+        return this.http.post<any>(`${this.baseUrl}scores`, data);
+    }
 }

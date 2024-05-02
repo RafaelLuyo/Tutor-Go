@@ -53,3 +53,10 @@
 .mat-icon {
   vertical-align: middle;
 }
+.white-text {
+  color: white;
+}
+
+.white-text .link-text {
+  color: white;
+}

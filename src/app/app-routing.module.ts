@@ -8,7 +8,7 @@ import {ValoracionesComponent} from "./TutorGo/students/components/valoraciones/
 import {TutorSeleccionadoComponent} from "./TutorGo/students/components/tutor-seleccionado/tutor-seleccionado.component";
 
 const routes: Routes = [
-  { path: 'score', component: ScoreComponent},
+  { path: 'score/:id', component: ScoreComponent },
   { path: 'schedule/:idTutor', component: ScheduleComponent},
   { path: 'calendar', component: CalendarComponent},
   { path: 'student-home', component:HomeComponent},

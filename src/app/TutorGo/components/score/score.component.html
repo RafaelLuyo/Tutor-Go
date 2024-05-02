@@ -1,24 +1,28 @@
-<mat-tab-group class="tab-group">
-  <mat-tab *ngFor="let tab of tabs" label="{{tab.title}}">
-    <div class="header">
-      <div class="column">Type</div>
-      <div class="column">Date</div>
-      <div class="column">Score</div>
-      <div class="column">Status</div>
-    </div>
-    <div class="score-column" *ngFor="let score of getScores(tab.title)">
-      <div class="score-card">
-        <div class="column">{{score.type}}</div>
-        <div class="column">{{formatDate(score.date)}}</div>
-        <div class="column">{{score.scoreValue}}</div>
-        <div class="column">{{score.status}}</div>
-      </div>
-    </div>
-    <div class="total">
-      <div class="column"></div>
-      <div class="column"></div>
-      <div class="column"></div>
-      <div class="column">{{ calculateUserTotal(tab.title) }}</div>
-    </div>
-  </mat-tab>
-</mat-tab-group>
+<div class="bg-white shadow-lg rounded-lg p-4">
+  <div class="flex space-x-4 border-b pb-2">
+    <button mat-button color="primary" (click)="fetchScoresAndStudent()">Todos</button>
+    <button mat-button color="primary" (click)="fetchScoresByFilter('GRADED')">Calificado</button>
+    <button mat-button color="primary" (click)="fetchScoresByFilter('SUBMITTED')">Enviado</button>
+  </div>
+
+  <div class="mt-4">
+    <table mat-table class="w-full text-sm text-left text-zinc-500" [dataSource]="scores">
+      <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef scope="col" class="py-3 px-6">Tema</th>
+        <td mat-cell *matCellDef="let score" class="py-4 px-6 font-medium text-zinc-900 whitespace-nowrap bold-type">{{ score.type }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef scope="col" class="py-3 px-6">Fecha</th>
+        <td mat-cell *matCellDef="let score" class="py-4 px-6">{{ formatDate(score.date) }}</td>
+      </ng-container>
+      <ng-container matColumnDef="scoreValue">
+        <th mat-header-cell *matHeaderCellDef scope="col" class="py-3 px-6">Calificación</th>
+        <td mat-cell *matCellDef="let score" class="py-4 px-6">{{ score.scoreValue }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['type', 'date', 'scoreValue']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['type', 'date', 'scoreValue'];"></tr>
+    </table>
+  </div>
+</div>
