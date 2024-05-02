@@ -19,6 +19,9 @@ import { CalendarComponent} from "./TutorGo/components/calendar/calendar.compone
 import {HomeComponent} from "./TutorGo/students/components/home/home.component";
 import {ValoracionesComponent} from "./TutorGo/students/components/valoraciones/valoraciones.component";
 import { MatCardModule } from '@angular/material/card';
+import {
+  TutorSeleccionadoComponent
+} from "./TutorGo/students/components/tutor-seleccionado/tutor-seleccionado.component";
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { MatCardModule } from '@angular/material/card';
     ScheduleComponent,
     CalendarComponent,
     ValoracionesComponent,
+    TutorSeleccionadoComponent,
     HomeComponent
   ],
   imports: [
