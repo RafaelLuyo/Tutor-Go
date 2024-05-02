@@ -37,6 +37,7 @@ import {
   MatTable
 } from "@angular/material/table";
 import { ListTutorComponent } from './TutorGo/students/components/list-tutor/list-tutor.component';
+import { ChatComponent } from './TutorGo/students/components/chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { ListTutorComponent } from './TutorGo/students/components/list-tutor/lis
     ShowProfileComponent,
     EditProfileTutorComponent,
     ShowProfileTutorComponent,
-    ListTutorComponent
+    ListTutorComponent,
+    ChatComponent
   ],
   imports: [
     HttpClientModule,
