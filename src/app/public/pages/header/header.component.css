@@ -1,0 +1,55 @@
+/* Estilos generales */
+.mat-toolbar {
+  background-color: #112C3D; /* Color de fondo de la barra de herramientas */
+  color: white; /* Color del texto en la barra de herramientas */
+}
+
+/* Estilos del header */
+.app-header {
+  background-color: #3c5e73; /* Color de fondo del header */
+}
+
+.app-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.spacer {
+  flex: 1; /* Espaciado flexible para el título */
+}
+
+/* Estilos del sidebar */
+.sidenav-container {
+  height: calc(100vh - 64px); /* Restar la altura del header */
+  background-color: white; /* Color de fondo del sidebar */
+}
+
+.mat-sidenav {
+  width: 200px; /* Ancho del sidebar */
+  background-color: #3c5e73; /* Color de fondo del sidebar */
+  color: white; /* Color del texto en el sidebar */
+}
+
+/* Estilos del contenido principal */
+.mat-sidenav-content {
+  background-color: white; /* Color de fondo del contenido principal */
+}
+.menu-button {
+  margin-right: 16px; /* Ajustar el margen a la derecha del botón del menú */
+}
+
+.mat-nav-list {
+  padding-top: 16px; /* Añadir un espacio en la parte superior de la lista de enlaces */
+}
+
+.mat-list-item {
+  padding: 8px 16px; /* Añadir espacio alrededor de cada elemento de la lista */
+}
+
+.link-text {
+  margin-left: 8px;
+  vertical-align: middle;/* Añadir un espacio entre el icono y el texto del enlace */
+}
+.mat-icon {
+  vertical-align: middle; /* Alinear verticalmente los iconos */
+}
