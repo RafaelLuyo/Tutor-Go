@@ -39,7 +39,7 @@
       "idTutor": 1,
       "days": "Monday",
       "time": "10:00 AM",
-      "TutorName": "Tomas Shelby",
+      "TutorName": "Esteban Soler",
       "price": 50
     },
     {
@@ -47,7 +47,7 @@
       "idTutor": 1,
       "days": "Tuesday",
       "time": "2:00 PM",
-      "TutorName": "Tomas Shelby",
+      "TutorName": "Esteban Soler",
       "price": 60
     },
     {
@@ -55,7 +55,7 @@
       "idTutor": 1,
       "days": "Wednesday",
       "time": "7:00 PM",
-      "TutorName": "Tomas Shelby",
+      "TutorName": "Esteban Soler",
       "price": 45
     },
     {
