@@ -3,33 +3,33 @@
     {
       "id": 1,
       "studentId": 1,
-      "type": "Math",
+      "type": "Algorithms ",
       "date": "2024-04-28",
-      "scoreValue": "85/100",
+      "scoreValue": "15/20",
       "status": "GRADED"
     },
     {
       "id": 2,
       "studentId": 1,
-      "type": "Science",
+      "type": "Data Structures",
       "date": "2024-04-27",
-      "scoreValue": "90/100",
+      "scoreValue": "10/20",
       "status": "GRADED"
     },
     {
       "id": 3,
-      "studentId": 2,
-      "type": "Math",
-      "date": "2024-04-28",
-      "scoreValue": "88/100",
-      "status": "SUBMITTED"
+      "studentId": 1,
+      "type": "Nodes",
+      "date": "No completado",
+      "scoreValue": "",
+      "status": ""
     },
     {
       "id": 4,
-      "studentId": 2,
-      "type": "Science",
+      "studentId": 1,
+      "type": "Database",
       "date": "2024-04-27",
-      "scoreValue": "92/100",
+      "scoreValue": "08/20",
       "status": "SUBMITTED"
     }
   ],
