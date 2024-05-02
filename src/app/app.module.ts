@@ -22,6 +22,7 @@ import { MatCardModule } from '@angular/material/card';
 import {
   TutorSeleccionadoComponent
 } from "./TutorGo/students/components/tutor-seleccionado/tutor-seleccionado.component";
+import {EditProfileComponent} from "./TutorGo/students/components/edit-profile/edit-profile.component";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {
     CalendarComponent,
     ValoracionesComponent,
     TutorSeleccionadoComponent,
-    HomeComponent
+    HomeComponent,
+    EditProfileComponent
   ],
   imports: [
     HttpClientModule,
