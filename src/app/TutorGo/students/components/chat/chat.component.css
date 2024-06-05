@@ -1,0 +1,99 @@
+.chat-container {
+  display: flex;
+  position: relative;
+  height: 100vh;
+}
+
+.professor-container {
+  background-color: lightblue;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  max-height: 120px;
+  overflow-y: auto;
+  margin-left: 300px;
+}
+
+.professor-info {
+  display: flex;
+  align-items: center;
+}
+
+.professor-info img {
+  width: 80px;
+  height: auto;
+}
+
+.professor-text {
+  margin-left: 10px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 100%;
+  background-color: #ccc;
+  position: absolute;
+  top: 0;
+  left: calc(500px - 1px);
+}
+
+.chat-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 120px;
+  margin-top: 50px;
+}
+
+.chat-history {
+  flex: 1;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.message-sender {
+  display: flex;
+  align-items: center;
+}
+
+.message-sender img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.message-content {
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.message-input {
+  margin-bottom: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.message-input textarea {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.message-input button {
+  padding: 5px 10px;
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+

@@ -1,0 +1,29 @@
+.title {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.title h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.image-wrapper {
+  margin: 10px;
+  text-align: center;
+}
+
+
+.image-text {
+  margin-top: 5px;
+}
+
+.text-below {
+  font-size: 55px;
+}

@@ -1,0 +1,80 @@
+{
+  "scores": [
+    {
+      "id": 1,
+      "studentId": 1,
+      "type": "Algorithms ",
+      "date": "2024-04-28",
+      "scoreValue": "15/20",
+      "status": "GRADED"
+    },
+    {
+      "id": 2,
+      "studentId": 1,
+      "type": "Data Structures",
+      "date": "2024-04-27",
+      "scoreValue": "10/20",
+      "status": "GRADED"
+    },
+    {
+      "id": 3,
+      "studentId": 1,
+      "type": "Nodes",
+      "date": "No completado",
+      "scoreValue": "",
+      "status": ""
+    },
+    {
+      "id": 4,
+      "studentId": 1,
+      "type": "Database",
+      "date": "2024-04-27",
+      "scoreValue": "08/20",
+      "status": "SUBMITTED"
+    }
+  ],
+  "schedules": [
+    {
+      "id": 1,
+      "idTutor": 1,
+      "days": "Monday",
+      "time": "10:00 AM",
+      "TutorName": "Esteban Soler",
+      "price": 50
+    },
+    {
+      "id": 2,
+      "idTutor": 1,
+      "days": "Tuesday",
+      "time": "2:00 PM",
+      "TutorName": "Esteban Soler",
+      "price": 60
+    },
+    {
+      "id": 3,
+      "idTutor": 1,
+      "days": "Wednesday",
+      "time": "7:00 PM",
+      "TutorName": "Esteban Soler",
+      "price": 45
+    },
+    {
+      "id": 4,
+      "idTutor": 2,
+      "days": "Wednesday",
+      "time": "10:00 AM",
+      "TutorName": "Penelope Cruz",
+      "price": 89.90
+    },
+    {
+      "id": 5,
+      "idTutor": 2,
+      "days": "Thursday",
+      "time": "06:00 PM",
+      "TutorName": "Penelope Cruz",
+      "price": 43.90
+    }
+
+
+  ]
+}
