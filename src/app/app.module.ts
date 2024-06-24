@@ -25,7 +25,7 @@ import {
 import {EditProfileComponent} from "./TutorGo/students/components/edit-profile/edit-profile.component";
 import {ShowProfileComponent} from "./TutorGo/students/components/show-profile/show-profile.component";
 import {EditProfileTutorComponent} from "./TutorGo/tutors/components/edit-profile-tutor/edit-profile-tutor.component";
-import {MatInput} from "@angular/material/input";
+import {MatError, MatInput} from "@angular/material/input";
 import {ShowProfileTutorComponent} from "./TutorGo/tutors/components/show-profile-tutor/show-profile-tutor.component";
 import {
   MatCell,
@@ -40,6 +40,12 @@ import { ListTutorComponent } from './TutorGo/students/components/list-tutor/lis
 import { ChatComponent } from './TutorGo/students/components/chat/chat.component';
 import{RoleComponent} from "./TutorGo/components/role/role.component";
 import{PageNotFoundComponent} from "./TutorGo/components/page-not-found/page-not-found.component";
+import {LoginComponent} from "./user/pages/login/login.component";
+import {RegisterComponent} from "./user/pages/register/register.component";
+import { MainComponent } from './user/components/main/main.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
+
 
 @NgModule({
   declarations: [
@@ -59,43 +65,53 @@ import{PageNotFoundComponent} from "./TutorGo/components/page-not-found/page-not
     ListTutorComponent,
     ChatComponent,
     RoleComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent,
+    RegisterComponent,
+    HeaderComponent,
+    MainComponent,
+
   ],
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    AppRoutingModule,
-    MatTab,
-    MatTabGroup,
-    MatSidenavContent,
-    MatIcon,
-    MatListItem,
-    MatSidenavContainer,
-    MatNavList,
-    MatIconButton,
-    MatToolbar,
-    MatButton,
-    MatSidenav,
-    MatCard,
-    ScheduleModule,
-    RecurrenceEditorModule,
-    MatCardContent,
-    MatCardHeader,
-    MatCardSubtitle,
-    MatCardModule,
-    MatCardActions,
-    MatInput,
-    MatTable,
-    MatColumnDef,
-    MatHeaderCell,
-    MatHeaderCellDef,
-    MatCellDef,
-    MatCell,
-    MatHeaderRow,
-    MatHeaderRowDef,
-    MatRowDef,
-    MatRow
-  ],
+    imports: [
+        HttpClientModule,
+        BrowserModule,
+        AppRoutingModule,
+        MatTab,
+        MatTabGroup,
+        MatSidenavContent,
+        MatIcon,
+        MatListItem,
+        MatSidenavContainer,
+        MatNavList,
+        MatIconButton,
+        MatToolbar,
+        MatButton,
+        MatSidenav,
+        MatCard,
+        ScheduleModule,
+        RecurrenceEditorModule,
+        MatCardContent,
+        MatCardHeader,
+        MatCardSubtitle,
+        MatCardModule,
+        MatCardActions,
+        MatInput,
+        MatTable,
+        MatColumnDef,
+        MatHeaderCell,
+        MatHeaderCellDef,
+        MatCellDef,
+        MatCell,
+        MatHeaderRow,
+        MatHeaderRowDef,
+        MatRowDef,
+        MatRow,
+        ReactiveFormsModule,
+        MatError,
+        MatMenuTrigger,
+        MatMenu,
+        MatMenuItem
+    ],
   providers: [
     provideAnimationsAsync(),
     DayService,WeekService,WorkWeekService,MonthService,MonthAgendaService
