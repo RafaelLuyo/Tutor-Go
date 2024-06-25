@@ -58,12 +58,9 @@ export class RegisterComponent implements OnInit {
         this.singUp.username = this.miFormulario.get('userName')?.value;
         this.singUp.password = this.miFormulario.get('password')?.value;
         const selectedRole = this.miFormulario.get('role')?.value;
-
-        if (selectedRole === 'ROLE_USER') {
+        selectedRole === 'ROLE_USER';
             this.createStudentAccount();
-        } else if (selectedRole === 'ROLE_MENTOR') {
-            this.createMentorAccount();
-        }
+
     }
 
     createStudentAccount(): void {
@@ -102,43 +99,5 @@ export class RegisterComponent implements OnInit {
         );
     }
 
-    createMentorAccount(): void {
-        this.student.firstName = this.singUp.username;
-        this.student.password = this.singUp.password;
-        this.student.email = "..@gmail.com";
-        this.student.lastname = "~";
-        this.student.subscription = "basico";
 
-          this.student.id= this.mentor.idStudent;
-
-
-        this.createAccountService.singUp(this.singUp).subscribe(
-            (response: any) => {
-                this.dataSource.data.push({ ...response });
-                this.dataSource.data = this.dataSource.data.map((p: SingUp) => {
-                    this.mentorService.create(this.mentor).subscribe(
-                        (mentorResponse: any) => {
-                            this.dataSource.data.push({ ...mentorResponse });
-                            this.mentorProfile.idMentor = mentorResponse.id;
-                            this.mentorProfile.nick = "";
-                            this.mentorProfile.phoneNumber = "999999999";
-                            this.mentorProfile.slogan = "";
-                            this.mentorProfile.userProfilePhoto = "";
-                            this.mentorProfile.certificates = [];
-                            this.mentorProfileService.create(this.mentorProfile).subscribe();
-                            alert("Mentor user created");
-                        },
-                        (error) => {
-                            console.error('Error creating mentor:', error);
-                        }
-                    );
-                    this.router.navigate(['/']);
-                    return p;
-                });
-            },
-            (error) => {
-                console.error('Error creating account:', error);
-            }
-        );
-    }
 }

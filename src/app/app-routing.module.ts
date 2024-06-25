@@ -27,7 +27,7 @@ const routes: Routes = [
   { path: 'student-valoraciones', component:ValoracionesComponent,canActivate: [AuthGuard]},
   { path: 'tutor-seleccionado', component:TutorSeleccionadoComponent,canActivate: [AuthGuard]},
   { path: 'edit-profile', component: EditProfileComponent,canActivate: [AuthGuard] },
-  { path: 'show-profile', component: ShowProfileComponent,canActivate: [AuthGuard]},
+  { path: 'student-profile/:studentProfileId', component: ShowProfileComponent,canActivate: [AuthGuard]},
   { path: 'edit-profile-tutor', component: EditProfileTutorComponent,canActivate: [AuthGuard]},
   { path: 'list-tutor', component: ListTutorComponent,canActivate: [AuthGuard]},
   { path: 'chat', component: ChatComponent,canActivate: [AuthGuard]},

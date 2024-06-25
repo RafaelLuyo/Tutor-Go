@@ -18,19 +18,7 @@
         </div>
       </div>
 
-      <div class="input-box">
-        <label class="mat-label">Role</label>
-        <div class="mat-form-field">
-          <mat-menu #appMenu="matMenu">
-            <button mat-menu-item (click)="miFormulario.get('role')?.setValue('ROLE_USER')">Student</button>
-            <button mat-menu-item (click)="miFormulario.get('role')?.setValue('ROLE_MENTOR')">Mentor</button>
-          </mat-menu>
-          <button mat-button [matMenuTriggerFor]="appMenu">
-            <mat-icon>menu</mat-icon>
-            Select Role
-          </button>
-        </div>
-      </div>
+
 
       <div class="column">
         <p>By registering you are accepting our <span><a routerLink="/terms">Terms of Use</a> </span> and <span><a routerLink="/privacy">Privacy Policy</a></span></p>
