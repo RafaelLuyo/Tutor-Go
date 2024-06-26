@@ -1,121 +1,116 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { ScoreComponent} from "./TutorGo/components/score/score.component";
-import {MatTab, MatTabGroup} from "@angular/material/tabs";
-import {HttpClientModule} from "@angular/common/http";
-import { HeaderComponent } from './public/pages/header/header.component';
-import {MatSidenav, MatSidenavContainer, MatSidenavContent} from "@angular/material/sidenav";
-import {MatIcon} from "@angular/material/icon";
-import {MatListItem, MatNavList} from "@angular/material/list";
-import {MatButton, MatIconButton} from "@angular/material/button";
-import {MatToolbar} from "@angular/material/toolbar";
-import { ScheduleComponent} from "./TutorGo/components/schedule/schedule.component";
-import {MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardSubtitle} from "@angular/material/card";
-import {ScheduleModule,RecurrenceEditorModule,DayService,WeekService,WorkWeekService,MonthService,MonthAgendaService} from "@syncfusion/ej2-angular-schedule";
-import { CalendarComponent} from "./TutorGo/components/calendar/calendar.component";
-import {HomeComponent} from "./TutorGo/students/components/home/home.component";
-import {ValoracionesComponent} from "./TutorGo/students/components/valoraciones/valoraciones.component";
-import { MatCardModule } from '@angular/material/card';
-import {
-  TutorSeleccionadoComponent
-} from "./TutorGo/students/components/tutor-seleccionado/tutor-seleccionado.component";
-import {EditProfileComponent} from "./TutorGo/students/components/edit-profile/edit-profile.component";
-import {ShowProfileComponent} from "./TutorGo/students/components/show-profile/show-profile.component";
-import {EditProfileTutorComponent} from "./TutorGo/tutors/components/edit-profile-tutor/edit-profile-tutor.component";
-import {MatError, MatInput} from "@angular/material/input";
-import {ShowProfileTutorComponent} from "./TutorGo/tutors/components/show-profile-tutor/show-profile-tutor.component";
-import {
-  MatCell,
-  MatCellDef,
-  MatColumnDef,
-  MatHeaderCell,
-  MatHeaderCellDef,
-  MatHeaderRow, MatHeaderRowDef, MatRow, MatRowDef,
-  MatTable
-} from "@angular/material/table";
-import { ListTutorComponent } from './TutorGo/students/components/list-tutor/list-tutor.component';
-import { ChatComponent } from './TutorGo/students/components/chat/chat.component';
-import{RoleComponent} from "./TutorGo/components/role/role.component";
-import{PageNotFoundComponent} from "./TutorGo/components/page-not-found/page-not-found.component";
-import {LoginComponent} from "./user/pages/login/login.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {LayoutModule} from "@angular/cdk/layout";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatButtonModule} from "@angular/material/button";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatIconModule} from "@angular/material/icon";
+import {MatListModule} from "@angular/material/list";
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatCardModule} from "@angular/material/card";
+import {MatMenuModule} from "@angular/material/menu";
+import {CommonModule, NgOptimizedImage} from "@angular/common";
+
+import { HeaderContentComponent } from './publication/components/header-content/header-content.component';
+import {RouterOutlet} from "@angular/router";
+import { MentorProfileComponent } from './user/pages/mentor-profile/mentor-profile.component';
+import { StudentProfileComponent } from './user/pages/student-profile/student-profile.component';
+import { AppRoutingModule } from './app-routing.module';
+import {PublicationService} from "./publication/services/publication.service";
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import {PublicationIdComponent} from "./publication/pages/publication-id/publication-id.component";
+import {ReviewsComponent} from "./publication/components/reviews/reviews.component";
+import { CardPublicationContentComponent } from './publication/components/card-publication-content/card-publication-content.component';
+import {HeaderComponent} from "./user/components/header/header.component";
+import{LoginComponent} from "./user/pages/login/login.component";
 import {RegisterComponent} from "./user/pages/register/register.component";
-import { MainComponent } from './user/components/main/main.component';
-import {ReactiveFormsModule} from "@angular/forms";
-import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
+import { MainComponent } from './publication/pages/main/main.component';
+import {SubscriptionContentComponent} from "./subscription/pages/subscription-content/subscription-content.component";
+import { CreatePostComponent } from './publication/pages/create-post/create-post.component';
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import { AppointmentComponent } from './advise/pages/appointment/appointment.component';
+import { InformationWindowComponent } from './publication/components/information-window/information-window.component';
+import {AuthInterceptor} from "./shared/helpers/auth.interceptor";
+import { SettingsComponent } from './publication/pages/settings/settings.component';
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatRadioModule} from "@angular/material/radio";
+import {MatSliderModule} from "@angular/material/slider";
+import {MatOptionModule} from "@angular/material/core";
+import {MatSelectModule} from "@angular/material/select";
+
+
+import { MatDialogModule } from '@angular/material/dialog';
+
+import {ModalComponent} from "./subscription/components/modal/modal.component";
+import {DetailArticleComponent} from "./subscription/pages/detail-article/detail-article.component";
+import {PaymentComponent} from "./subscription/pages/payment/payment.component";
+import { NotificationItemComponent } from './advise/components/notification-item/notification-item.component';
+import { NotificationListComponent } from './advise/pages/notification-list/notification-list.component';
 
 
 @NgModule({
   declarations: [
 
-    AppComponent,
-    ScoreComponent,
-    HeaderComponent,
-    ScheduleComponent,
-    CalendarComponent,
-    ValoracionesComponent,
-    TutorSeleccionadoComponent,
-    HomeComponent,
-    EditProfileComponent,
-    ShowProfileComponent,
-    EditProfileTutorComponent,
-    ShowProfileTutorComponent,
-    ListTutorComponent,
-    ChatComponent,
-    RoleComponent,
-    PageNotFoundComponent,
-    LoginComponent,
-    RegisterComponent,
-    HeaderComponent,
-    MainComponent,
+      AppComponent,
+      HeaderContentComponent,
+      MentorProfileComponent,
+      StudentProfileComponent,
+      PublicationIdComponent,
+      ReviewsComponent,
+      HeaderComponent,
+      LoginComponent,
+      RegisterComponent,
+      MainComponent,
+      CardPublicationContentComponent,
+      SubscriptionContentComponent,
+      CreatePostComponent,
+      AppointmentComponent,
+      InformationWindowComponent,
+      SettingsComponent,
+      ModalComponent,
+      DetailArticleComponent,
+      PaymentComponent,
+      NotificationItemComponent,
+      NotificationListComponent
 
   ],
     imports: [
-        HttpClientModule,
+        CommonModule,
         BrowserModule,
-        AppRoutingModule,
-        MatTab,
-        MatTabGroup,
-        MatSidenavContent,
-        MatIcon,
-        MatListItem,
-        MatSidenavContainer,
-        MatNavList,
-        MatIconButton,
-        MatToolbar,
-        MatButton,
-        MatSidenav,
-        MatCard,
-        ScheduleModule,
-        RecurrenceEditorModule,
-        MatCardContent,
-        MatCardHeader,
-        MatCardSubtitle,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        LayoutModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatListModule,
+        MatGridListModule,
         MatCardModule,
-        MatCardActions,
-        MatInput,
-        MatTable,
-        MatColumnDef,
-        MatHeaderCell,
-        MatHeaderCellDef,
-        MatCellDef,
-        MatCell,
-        MatHeaderRow,
-        MatHeaderRowDef,
-        MatRowDef,
-        MatRow,
+        MatMenuModule,
+        NgOptimizedImage,
+        RouterOutlet,
+        AppRoutingModule,
+        FormsModule,
+        MatInputModule,
         ReactiveFormsModule,
-        MatError,
-        MatMenuTrigger,
-        MatMenu,
-        MatMenuItem
+        MatSlideToggleModule,
+        MatCheckboxModule,
+        MatRadioModule,
+        MatSliderModule,
+        MatOptionModule,
+        MatSelectModule,
+        MatDialogModule,
+
     ],
-  providers: [
-    provideAnimationsAsync(),
-    DayService,WeekService,WorkWeekService,MonthService,MonthAgendaService
-  ],
-  bootstrap: [AppComponent]
+    exports:[ NotificationItemComponent,],
+    providers: [PublicationService, {
+        provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true
+    }],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,47 @@
+<div class="content-add-post">
+  <form (ngSubmit)="createPublication()" class="form-add-post">
+    <div class="add-post-left">
+      <img [src]="images[0] ? images[0] : 'https://cdn.discordapp.com/attachments/1149549727197696111/1173807309676347422/Blue-Add-Button-PNG-Pic.png?ex=65654c3e&is=6552d73e&hm=42b5571e9fc3d0f144e7a1d50f14e8737577dd883cdb5fa4fca4a9772f9c526d&'">
+      <div class="pie">
+        <input type="file" name="foto" id="foto" >
+        <label for="foto" id="agregar">Add images</label>
+      </div>
+      <div class="post-slide-toggle">
+        <mat-icon>remove_red_eye</mat-icon>
+        <mat-slide-toggle class="example-margin" [color]="color" [checked]="checked" [disabled]="disabled">
+          show views
+        </mat-slide-toggle>
+      </div>
+      <div class="post-slide-toggle">
+        <mat-icon>thumb_up</mat-icon>
+        <mat-slide-toggle class="example-margin" [color]="color" [checked]="checked" [disabled]="disabled">
+          show calls
+        </mat-slide-toggle>
+      </div>
+    </div>
+    <div class="add-post-right">
+      <div class="post-title">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Title" [(ngModel)]="publication.title" name="postTitle" required>
+        </mat-form-field>
+      </div>
+
+      <div class="post-description">
+        <mat-form-field class="full-width">
+          <textarea matInput placeholder="Description" [(ngModel)]="publication.description" name="postDescription" required rows="8"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="post-slide-toggle2">
+        <mat-icon>forum</mat-icon>
+        <mat-slide-toggle class="example-margin" [color]="color" [checked]="checked" [disabled]="disabled">
+          show comments
+        </mat-slide-toggle>
+      </div>
+
+      <div class="content-button">
+        <button type="submit" mat-raised-button color="primary">Create Publication</button>
+        <button mat-raised-button (click)="cancelEdit()" color="warn">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>

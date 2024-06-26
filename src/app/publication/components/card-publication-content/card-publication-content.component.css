@@ -1,0 +1,70 @@
+.content_publications{
+  display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+.card-publication {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px;
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: #E3BD86;
+}
+.icons_content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+
+}
+.imagen_card_publication{
+  margin: 18px auto;
+  width: 90%;
+  height: 170px;
+  object-fit: cover;
+  display: flex;
+}
+.imagen_card_publication img{
+  width: 0;
+  flex-grow: 1;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.icons_card{
+  display: flex;
+  padding: 0;
+  margin: 0 8px;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+.icons_card mat-icon{
+  margin: 0 4px;
+}
+
+
+
+.align-center{
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+}
+
+p {
+  margin-top: 20px;
+  font-size: 24px; /* Ajusta el tamaño del texto */
+  font-weight: bold; /* Hace el texto en negrita */
+  text-align: center; /* Centra el texto */
+}
+.icon_asesor{
+  width: 60px;
+  height: 60px;
+}
+.icon_asesor mat-icon{
+  width: 60px;
+  height: 60px;
+  font-size: 60px;
+}

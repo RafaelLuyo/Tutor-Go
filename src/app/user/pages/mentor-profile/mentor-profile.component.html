@@ -1,0 +1,79 @@
+<div *ngIf="userProfile">
+  <mat-card class="profile-card">
+    <div class="profile-content">
+
+      <div class="profile-avatar" *ngIf="!isEditing">
+        <img [src]="userProfile.userProfilePhoto|| 'https://cdn.discordapp.com/attachments/1149549726748921939/1175717928063225928/images.png?ex=656c3fa5&is=6559caa5&hm=d6a6935bf1b8eeff5f2ee6b0ad85786c82ac00b04cd78163e624fd62c17a01e1&'" alt="Profile Image">
+      </div>
+      <div class="profile-avatar" *ngIf="isEditing">
+        <img [src]="images[0] || userProfile.userProfilePhoto" alt="Profile Image">
+        <div class="pie">
+          <input type="file" name="foto" id="foto" >
+          <label for="foto" id="agregar">Edit photo profile</label>
+        </div>
+      </div>
+
+      <div class="profile-details">
+        <mat-card-title>
+          <ng-container *ngIf="!isEditing">{{ userProfile.mentor.student.studentName }}</ng-container>
+          <ng-container *ngIf="isEditing">{{ userProfile.mentor.student.studentName }}
+            <!--<input matInput [(ngModel)]="userProfile.student.studentName" name="name">-->
+          </ng-container>
+        </mat-card-title>
+        <mat-card-content>
+          <ng-container *ngIf="!isEditing">{{ userProfile.nick }}</ng-container>
+          <ng-container *ngIf="isEditing">
+            <input matInput [(ngModel)]="userProfile.nick" name="nick">
+          </ng-container>
+        </mat-card-content>
+        <mat-card-content>
+          <mat-icon>email</mat-icon>
+          <ng-container *ngIf="!isEditing">{{ userProfile.mentor.student.emailAddress }}</ng-container>
+          <ng-container *ngIf="isEditing">{{ userProfile.mentor.student.emailAddress }}
+            <!--<input matInput [(ngModel)]="userProfile.student.emailAddress" name="email">-->
+          </ng-container>
+        </mat-card-content>
+        <mat-card-content>
+          <mat-icon>phone</mat-icon>
+          <ng-container *ngIf="!isEditing">{{ userProfile.phoneNumber }}</ng-container>
+          <ng-container *ngIf="isEditing">
+            <input matInput [(ngModel)]="userProfile.phoneNumber" name="cellphone">
+          </ng-container>
+        </mat-card-content>
+        <mat-card-content>
+          <mat-icon>comment</mat-icon>
+          <ng-container *ngIf="!isEditing">"{{ userProfile.slogan }}"</ng-container>
+          <ng-container *ngIf="isEditing">
+            <input matInput [(ngModel)]="userProfile.slogan" name="slogan">
+          </ng-container>
+        </mat-card-content>
+      </div>
+    </div>
+    Certificates
+    <div class="profile-avatar" *ngIf="isEditing">
+      <div class="pie">
+        <input type="file" name="foto1" id="certificate" >
+        <label for="certificate">Added certificates</label>
+      </div>
+    </div>
+
+    <div class="profile-certificates" *ngIf="!certificatesIsEmpty">
+      <div *ngFor="let certificates of userProfile.certificates" class="colum-certificate">
+        <img [src]="certificates" alt="certificates img">
+      </div>
+    </div>
+    <div class="profile-certificates" *ngIf="certificatesIsEmpty">
+      <h5>Certificates not uploaded </h5>
+      <img src="https://cdn.discordapp.com/attachments/1149549726748921939/1176429950853726279/8B7fIYyIFXTPYAAAAASUVORK5CYII.png?ex=656ed6c5&is=655c61c5&hm=76ff687e7ff1e22c33c31b9300819aec645127bb813b265ad8ced0355e264365&" alt="certificates null">
+    </div>
+    <mat-card-actions>
+      <ng-container *ngIf="isEditing; else showButtons" class="buttons_edit">
+        <button mat-raised-button color="primary" (click)="saveProfile()">Guardar</button>
+        <button mat-raised-button color="warn" (click)="cancelEdit()">Cancelar</button>
+      </ng-container>
+      <ng-template #showButtons>
+        <button mat-raised-button color="primary" (click)="toggleEdit()">Editar Perfil</button>
+      </ng-template>
+    </mat-card-actions>
+  </mat-card>
+</div>

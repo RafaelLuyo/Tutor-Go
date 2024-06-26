@@ -1,0 +1,25 @@
+<div class="content_publications">
+  <mat-card *ngFor="let publication of publications" class="card-publication" (click)="seeIdPublication(publication.id)">
+    <div class="imagen_card_publication">
+      <img [src]="publication.image" [alt]="publication.title">
+    </div>
+    <div class="icons_content">
+      <div class="icons_card">
+        <mat-icon>remove_red_eye</mat-icon>
+        {{publication.views}}
+      </div>
+      <div class="icons_card">
+        <mat-icon>thumb_up</mat-icon>
+        {{publication.likes}}
+      </div>
+    </div>
+    <mat-card-actions class="align-center">
+      <div class="icon_asesor">
+        <mat-icon>assignment_ind</mat-icon>
+      </div>
+      <p>
+        &#64;{{publication.mentorProfile.nick}}
+      </p>
+    </mat-card-actions>
+  </mat-card>
+</div>

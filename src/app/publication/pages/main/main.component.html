@@ -1,0 +1,13 @@
+
+  <h1>Welcome {{student?.fullName}} !!!</h1>
+<div class="content">
+  <div class="subtitle">News..</div>
+  <div class="content-publication">
+    <app-card-publication-content [publications]="publicationsA" ></app-card-publication-content>
+  </div>
+</div>
+
+  <div class="content-button">
+    <button class="buttons" (click)="addPost()" >Add Post</button>
+  </div>
+

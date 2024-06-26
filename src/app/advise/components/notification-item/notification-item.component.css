@@ -1,0 +1,41 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px;
+  width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #E3BD86;
+}
+
+mat-card-title,
+mat-card-subtitle {
+  padding: 16px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2E2E2E;
+}
+
+mat-card-subtitle {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+mat-card-content {
+  padding: 16px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+
+mat-card-content strong {
+  color: #1E88E5;
+}
