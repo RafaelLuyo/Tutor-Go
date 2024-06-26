@@ -1,0 +1,35 @@
+
+<div class="example-container" *ngIf="shouldRun">
+  <div class="header">
+    <div class="logo">
+      <button (click)="snav.toggle()" class="menu"><mat-icon>menu</mat-icon></button>
+      <img  src='https://cdn.discordapp.com/attachments/1149549726748921942/1154114469371334736/image.png'>
+    </div>
+    <div class="buttons">
+        <mat-icon class="notifications" (click)="navigateNotification()">notifications</mat-icon>
+      <div class="profile-avatar">
+        <img [src]="studentProfile?.userProfilePhoto||'https://cdn.discordapp.com/attachments/1149549726748921939/1175717928063225928/images.png?ex=656c3fa5&is=6559caa5&hm=d6a6935bf1b8eeff5f2ee6b0ad85786c82ac00b04cd78163e624fd62c17a01e1&'" alt="Profile Image">
+      </div>
+    </div>
+
+  </div>
+
+  <mat-sidenav-container class="content">
+    <mat-sidenav #snav [mode]="'side'">
+      <mat-nav-list>
+        <a (click)="navigateHome()" class="link"><mat-icon>home</mat-icon> Home</a>
+        <a (click)="navigateStudentProfile()" class="link"><mat-icon>account_circle</mat-icon> My profile</a>
+        <a (click)="navigateMentorProfile()" class="link"><mat-icon>people</mat-icon> Mentors</a>
+
+        <a (click)="navigateSubscription()" class="link"><mat-icon>grade</mat-icon> Subscription</a>
+        <a (click)="navigateSetting()" class="link"><mat-icon>settings</mat-icon> Settings</a>
+        <a (click)="navigateLogin()" class="link" id="back"><mat-icon>meeting_room</mat-icon> Back </a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <!--aqui van los link-->
+      <p><router-outlet></router-outlet></p>
+      </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

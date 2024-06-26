@@ -1,0 +1,44 @@
+.settings-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.settings-card {
+  width: 350px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.option-container {
+  margin-bottom: 20px;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-checkbox {
+  margin-bottom: 10px;
+}
+
+.disable-checkbox {
+  margin-bottom: 20px;
+}
+
+mat-radio-button {
+  margin-bottom: 5px;
+}
+
+mat-slider {
+  width: 100%;
+}
+
+mat-card-title {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}

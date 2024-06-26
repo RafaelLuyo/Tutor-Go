@@ -1,0 +1,40 @@
+.view-r{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+
+.Background-r{
+  background-color: beige;
+}
+.Background-re{
+  background-color: darkseagreen;
+}
+
+.botones-r{
+  display: inline-block;
+  margin-right: 90px;
+  height: 60px;
+  width: 240px;
+}
+
+.fotocom-r{
+  margin-right: 370px;
+}
+.chat-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.escribir{
+  width: 70%;
+  height: 100%;
+}
+
+.boton-enviar {
+  font-size: 18px;
+  min-width: auto;
+  margin-left: 20px;
+}
