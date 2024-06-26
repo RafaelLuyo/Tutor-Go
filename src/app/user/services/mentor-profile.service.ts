@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {BaseService} from "../../shared/services/base/base.service";
+import {BaseService} from "../../shared/services/base.service";
 import {HttpClient} from "@angular/common/http";
 import {catchError, retry} from "rxjs";
 import {MentorProfile} from "../model/mentor-profile";

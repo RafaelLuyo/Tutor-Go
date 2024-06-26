@@ -1,0 +1,76 @@
+.profile-card {
+  max-width: 600px;
+  margin: 60px auto;
+  text-align: center;
+  background-color: #e1bc85;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-avatar img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px;
+  border: 2px solid #e8b568;
+}
+.pie{
+  text-align: center;
+  text-shadow: 0px 0px 1px ;
+  padding: 5px;
+  font-size: 25px;
+}
+.pie input#foto{
+  display: none;
+}
+.pie label:hover{
+  cursor: pointer;
+}
+
+mat-card-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+mat-card-subtitle,
+mat-card-content {
+  text-align: left;
+  margin: 19px 10px;
+  padding: 0 0;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #4f6f5d;
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.mdc-card__actions {
+  display: flex; /* Alinea los botones horizontalmente */
+  justify-content: space-between; /* Espacio entre los botones */
+}
+
+.buttons_edit button {
+  margin: 20px;
+}
+

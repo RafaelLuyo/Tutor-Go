@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
-import {BaseService} from "../../shared/services/base/base.service";
+import {BaseService} from "../../shared/services/base.service";
+import {Publication} from "../../publication/model/publication";
 import {HttpClient} from "@angular/common/http";
 import {catchError, Observable, retry} from "rxjs";
-import {StudentProfile} from "../model/student-profile";
-import {Publication} from "../model/publication";
 
 @Injectable({
   providedIn: 'root'
 })
-export class StudentProfileService extends BaseService<StudentProfile>{
+export class StudentProfileService extends BaseService<Publication>{
 
   constructor(http: HttpClient) {
     super(http);
