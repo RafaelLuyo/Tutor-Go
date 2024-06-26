@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import {StudentProfile} from "../../model/student-profile";
 import {StudentProfileService} from "../../services/student-profile.service";
 import {MatTableDataSource} from "@angular/material/table";
-import {FileUploadService} from "../../../publication/services/file-upload.service";
+
 
 @Component({
   selector: 'app-student-profile',
@@ -21,7 +21,7 @@ export class StudentProfileComponent implements OnInit {
   constructor(
     private studentProfileService: StudentProfileService,
     public route: ActivatedRoute,
-    private fileUploadService: FileUploadService
+
 
   ) {
     this.dataSource = new MatTableDataSource<any>();
@@ -81,22 +81,5 @@ export class StudentProfileComponent implements OnInit {
   }
 
 
-  onFileSelected(event: any): void {
-    let archivoCapturado = event.target.files;
 
-    for (let i = 0; i < archivoCapturado.length; i++) {
-      let reader = new FileReader();
-      reader.readAsDataURL(archivoCapturado[i]);
-
-      reader.onloadend = () => {
-        console.log(reader.result);
-        this.images.push(reader.result);
-        this.fileUploadService.submitImage(this.userProfile?.id + " " + Date.now(), reader.result).then(urlImage => {
-          console.log(urlImage);
-          // @ts-ignore
-          this.urlImage = urlImage;
-        });
-      }
-    }
-  }
 }

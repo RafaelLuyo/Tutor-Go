@@ -1,69 +1,62 @@
- <mat-card-content>
+<mat-card-content>
+  <div style="display:flex; flex-direction:column;">
+    <div style="display:flex; flex-direction:row; align-items: center; margin-bottom: 10px;">
       <div style="display:flex; flex-direction:column;">
-        <div style="display:flex; flex-direction:row; align-items: center; margin-bottom: 10px;">
-          <div style="display:flex; flex-direction:column;">
-            <mat-card class="Background-re">
-              <mat-card-content>
+        <mat-card class="Background-re">
+          <mat-card-content>
+            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+              <img src="https://cdn.discordapp.com/attachments/1149190528756363337/1155196801918439534/image.png" width="34px" style="margin-right: 10px;">
+              <mat-card>
                 <mat-card-content>
-                  <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                    <img src="https://cdn.discordapp.com/attachments/1149190528756363337/1155196801918439534/image.png" width="34px" style="margin-right: 10px;">
-                    <mat-card>
-                      <mat-card-content>
-                        <p>@Yean__54</p>
-                        <p>Fascinating, but I have a question, what materials did you use to build all that arsenal and where did you buy it?</p>
-                      </mat-card-content>
-                    </mat-card>
-                  </div>
-
-                  <div style="display: flex; align-items:center; margin-bottom: 10px;">
-                    <img src="https://cdn.discordapp.com/attachments/1149190528756363337/1155197608231440426/image.png" width="34px" style="margin-right: 10px;">
-                    <mat-card>
-                      <mat-card-content>
-                        <p>@JuanX_24 <span style="color: red;">(owner)</span></p>
-                        <p>Good morning, the material was purchased from Store X, if you need more information, do not hesitate to write to me.</p>
-                      </mat-card-content>
-                    </mat-card>
-                  </div>
-
-
-                  <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                    <img src="https://cdn.discordapp.com/attachments/1149190528756363337/1155199425409458279/585e4beacb11b227491c3399.png" width="34px" style="margin-right: 10px;">
-                    <mat-card>
-                      <mat-card-content>
-                        <p>@Sandr4.26</p>
-                        <p>Very good work, there are people who do take the contests and their goals seriously.</p>
-                      </mat-card-content>
-                    </mat-card>
-                  </div>
-
-                  <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                    <img src="https://cdn.discordapp.com/attachments/1149190528756363337/1155196801918439534/image.png" width="34px" style="margin-right: 10px;">
-                    <mat-card>
-                      <mat-card-content>
-                        <p>@Diego</p>
-                        <p>Incredible work, it helped me a lot in my final project, thank you from the bottom of my heart.</p>
-                      </mat-card-content>
-                    </mat-card>
-                  </div>
+                  <p>&#64;Yean__54</p>
+                  <p>Fascinating, but I have a question, what materials did you use to build all that arsenal and where did you buy it?</p>
                 </mat-card-content>
+              </mat-card>
+            </div>
 
-                <div class="chat-container">
-                  <div class="chat-messages">
+            <div style="display: flex; align-items:center; margin-bottom: 10px;">
+              <img src="https://cdn.discordapp.com/attachments/1149190528756363337/1155197608231440426/image.png" width="34px" style="margin-right: 10px;">
+              <mat-card>
+                <mat-card-content>
+                  <p>&#64;JuanX_24 <span style="color: red;">(owner)</span></p>
+                  <p>Good morning, the material was purchased from Store X, if you need more information, do not hesitate to write to me.</p>
+                </mat-card-content>
+              </mat-card>
+            </div>
 
-                  </div>
-                  <div class="chat-input">
-                    <mat-form-field class="escribir">
-                      <mat-label>Enviar mensaje</mat-label>
-                      <textarea matInput placeholder="Escribe tu mensaje" [(ngModel)]="newMessageText"></textarea>
-                    </mat-form-field>
-                    <button class="boton-enviar" mat-raised-button>Enviar</button>
-                  </div>
-                </div>
-              </mat-card-content>
-            </mat-card>
-          </div>
-        </div>
+            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+              <img src="https://cdn.discordapp.com/attachments/1149190528756363337/1155199425409458279/585e4beacb11b227491c3399.png" width="34px" style="margin-right: 10px;">
+              <mat-card>
+                <mat-card-content>
+                  <p>&#64;Sandr4.26</p>
+                  <p>Very good work, there are people who do take the contests and their goals seriously.</p>
+                </mat-card-content>
+              </mat-card>
+            </div>
+
+            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+              <img src="https://cdn.discordapp.com/attachments/1149190528756363337/1155196801918439534/image.png" width="34px" style="margin-right: 10px;">
+              <mat-card>
+                <mat-card-content>
+                  <p>&#64;Diego</p>
+                  <p>Incredible work, it helped me a lot in my final project, thank you from the bottom of my heart.</p>
+                </mat-card-content>
+              </mat-card>
+            </div>
+
+            <div class="chat-container">
+              <div class="chat-messages"></div>
+              <div class="chat-input">
+                <mat-form-field class="escribir">
+                  <mat-label>Enviar mensaje</mat-label>
+                  <textarea matInput placeholder="Escribe tu mensaje" [(ngModel)]="newMessageText"></textarea>
+                </mat-form-field>
+                <button class="boton-enviar" mat-raised-button>Enviar</button>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
       </div>
-    </mat-card-content>
-
-
+    </div>
+  </div>
+</mat-card-content>

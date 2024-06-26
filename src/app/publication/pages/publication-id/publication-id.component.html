@@ -1,55 +1,42 @@
 <div class="content_id">
-  <div  class="card-publication">
+  <div class="card-publication">
     <div class="add-post-left">
-      <div class="title">{{publication?.title}}</div>
+      <div class="title">{{ publication?.title }}</div>
 
       <div class="imagen_card_publication" (click)="openModal()">
-        <img [src]="publication?.image"
-             [alt]='publication?.title'
-        >
+        <img [src]="publication?.image" [alt]="publication?.title">
       </div>
       <dialog id="modal" class="modal">
         <form method="dialog" class="form">
           <div class="img_modal_content" *ngFor="let img of publication?.image">
-            <img [src]="img"
-                 [alt]='publication?.title'
-            >
+            <img [src]="img" [alt]="publication?.title">
           </div>
-            <button type="submit" id="Cerrar" class="modal-close">Cerrar</button>
+          <button type="submit" id="Cerrar" class="modal-close">Cerrar</button>
         </form>
       </dialog>
 
-      <div class="title_desc">
-        Description:
-      </div>
-      <div class="description">
-        {{publication?.description}}
-      </div>
+      <div class="title_desc">Description:</div>
+      <div class="description">{{ publication?.description }}</div>
 
       <div class="icons_content">
         <div class="icons_card">
-          <mat-icon >remove_red_eye</mat-icon>
-          {{viewCount}}
+          <mat-icon>remove_red_eye</mat-icon>
+          {{ viewCount }}
         </div>
         <div class="icons_card">
           <mat-icon *ngIf="!liked" (click)="incrementLike()">thumb_up</mat-icon>
           <mat-icon *ngIf="liked" id="like_color" (click)="discountLike()">thumb_up</mat-icon>
-          {{linkCount}}
+          {{ linkCount }}
         </div>
-
-
       </div>
       <mat-card-actions class="align-center">
         <div class="icon_asesor">
-          <mat-icon >assignment_ind</mat-icon>
+          <mat-icon>assignment_ind</mat-icon>
         </div>
-        <p>
-          @{{publication?.mentorProfile?.nick}}
-        </p>
-
+        <p>&#64;{{ publication?.mentorProfile?.nick }}</p>
       </mat-card-actions>
       <div class="icon_contract">
-        <mat-icon >insert_drive_file</mat-icon>
+        <mat-icon>insert_drive_file</mat-icon>
         <div class="content-button">
           <button class="buttons" (click)="routerAppointment()">make contract</button>
         </div>
@@ -59,24 +46,14 @@
       </div>
     </div>
     <div class="add-post-right">
-
-        <div class="icon_message">
-          <div class="comments">
-            <mat-icon >forum</mat-icon>
-            4 comments
-          </div>
-
-          <mat-icon class="icon_close" (click)="back()">clear</mat-icon>
+      <div class="icon_message">
+        <div class="comments">
+          <mat-icon>forum</mat-icon>
+          4 comments
+        </div>
+        <mat-icon class="icon_close" (click)="back()">clear</mat-icon>
       </div>
-
-
       <app-reviews></app-reviews>
-
     </div>
-
-
   </div>
 </div>
-
-
-

@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import {MentorProfile} from "../../model/mentor-profile";
 import {MatTableDataSource} from "@angular/material/table";
 import {MentorProfileService} from "../../services/mentor-profile.service";
-import {FileUploadService} from "../../../publication/services/file-upload.service";
+
 
 @Component({
   selector: 'app-mentor-profile',
@@ -23,7 +23,7 @@ export class MentorProfileComponent implements OnInit {
   constructor(
     private mentorProfileService: MentorProfileService,
     private route: ActivatedRoute,
-    private fileUploadService: FileUploadService
+
   ) {
     this.dataSource = new MatTableDataSource<any>();
   }
@@ -92,40 +92,7 @@ export class MentorProfileComponent implements OnInit {
     });
   }
 
-  onFileSelected(event: any): void {
-    let archivoCapturado = event.target.files;
 
-    for (let i = 0; i < archivoCapturado.length; i++) {
-      let reader = new FileReader();
-      reader.readAsDataURL(archivoCapturado[i]);
 
-      reader.onloadend = () => {
-        console.log(reader.result);
-        this.images.push(reader.result);
-        this.fileUploadService.submitImage(this.userProfile?.id + " " + Date.now(), reader.result).then(urlImage => {
-          console.log(urlImage);
-          // @ts-ignore
-          this.urlImage = urlImage;
-        });
-      }
-    }
-  }
-
-  onCertificatesSelect(event: any): void {
-    let archivoCapturado = event.target.files;
-
-    for (let i = 0; i < archivoCapturado.length; i++) {
-      let reader = new FileReader();
-      reader.readAsDataURL(archivoCapturado[i]);
-      reader.onloadend = () => {
-        this.imagesC.push(reader.result);
-        this.fileUploadService.submitImage(this.userProfile?.id + " " + Date.now(), reader.result).then(urlImage => {
-          console.log(urlImage);
-          // @ts-ignore
-          this.userProfile?.certificates.push(urlImage);
-        });
-      }
-    }
-  }
 }
 

@@ -8,10 +8,10 @@
       <div class="profile-avatar" *ngIf="isEditing">
         <img [src]="images[0] || userProfile.userProfilePhoto" alt="Profile Image">
         <div class="pie">
-          <input type="file" name="foto" id="foto" (change)="onFileSelected($event)" accept=".png, .jpeg, .jpg" multiple>
+          <input type="file" name="foto" id="foto" >
           <label for="foto" id="agregar">Edit photo profile</label>
         </div>
-        
+
       </div>
 
       <div class="profile-details">
