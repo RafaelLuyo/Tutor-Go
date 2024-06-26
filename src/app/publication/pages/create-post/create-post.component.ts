@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import {ThemePalette} from "@angular/material/core";
-import {PublicationService} from "../../services/publication.service";
-import {Publication} from "../../model/publication";
-import {MatTableDataSource} from "@angular/material/table";
-import {ActivatedRoute, Router} from "@angular/router";
-
+import { ThemePalette } from "@angular/material/core";
+import { PublicationService } from "../../services/publication.service";
+import { Publication } from "../../model/publication";
+import { MatTableDataSource } from "@angular/material/table";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
   selector: 'app-create-post',
@@ -13,40 +12,37 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class CreatePostComponent {
   idUrl: string | undefined;
-  isVisibilityOn: any;
   color: ThemePalette = "warn";
   checked = true;
   disabled = false;
   dataSource: MatTableDataSource<any>;
   publication: Publication;
-  //imagen
-  images: any = [];
-  private Integer: any;
 
-  constructor(private route: ActivatedRoute, private tutorgoService: PublicationService, private router: Router) {
+  constructor(
+    private route: ActivatedRoute,
+    private publicationService: PublicationService,
+    private router: Router
+  ) {
     this.publication = {} as Publication;
     this.dataSource = new MatTableDataSource<any>();
 
-    this.publication.image = [];
     this.route.queryParams.subscribe(params => {
       this.idUrl = params['id'];
     });
     this.publication.mentorProfileId = Number(this.idUrl);
+    this.publication.image = []; // Inicializar el array de imágenes vacío
   }
 
   createPublication(): void {
     this.publication.id = 0;
-    this.tutorgoService.create(this.publication).subscribe(
-      (response: any) => {
-        this.dataSource.data.push({...response});
-        console.log(this.dataSource)
-        this.dataSource.data = this.dataSource.data.map((p: Publication) => {
-          console.log(p);
-          alert("post created")
-          this.router.navigate(["/home"],{ queryParams: { id: this.idUrl }});
-          return p;
+    this.publication.image = [""]; // Asignar un array con un string vacío como imagen
 
-        });
+    this.publicationService.create(this.publication).subscribe(
+      (response: any) => {
+        this.dataSource.data.push({ ...response });
+        console.log(this.dataSource.data);
+        alert("Post creado exitosamente");
+        this.router.navigate(['/home'], { queryParams: { id: this.idUrl } });
       },
       (error) => {
         console.error('Error en la solicitud:', error);
@@ -54,8 +50,7 @@ export class CreatePostComponent {
     );
   }
 
-
   cancelEdit() {
-    this.router.navigate(["/home"],{ queryParams: { id: this.idUrl } });
+    this.router.navigate(['/home'], { queryParams: { id: this.idUrl } });
   }
 }

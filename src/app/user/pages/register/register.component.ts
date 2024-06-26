@@ -48,6 +48,7 @@ export class RegisterComponent implements OnInit{
     this.student.email="..@gmail.com";
     this.student.lastname="~";
 
+
     this.createAccountService.singUp(this.singUp).subscribe(
       (response: any) => {
         this.dataSource.data.push({...response});
@@ -68,14 +69,14 @@ export class RegisterComponent implements OnInit{
               });
 
               //translate data
-              this.studentProfile.nick="";
+              this.studentProfile.nick="aquivatunick";
               this.studentProfile.phoneNumber="999999999";
-              this.studentProfile.slogan="";
-              this.studentProfile.userProfilePhoto="";
+              this.studentProfile.slogan="letsgo";
+              this.studentProfile.userProfilePhoto="string";
               //create student profile
               this.studentProfileService.create(this.studentProfile).subscribe();
               alert("user created")
-              },
+            },
             (error) => {
               console.error('Error en la solicitud:', error);
             }
