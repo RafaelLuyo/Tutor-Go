@@ -14,23 +14,30 @@ import{ListTutorComponent} from "./TutorGo/students/components/list-tutor/list-t
 import{ChatComponent} from "./TutorGo/students/components/chat/chat.component";
 import{RoleComponent} from "./TutorGo/components/role/role.component";
 import {PageNotFoundComponent} from "./TutorGo/components/page-not-found/page-not-found.component";
+import {RegisterComponent} from "./user/pages/register/register.component";
+import {LoginComponent} from "./user/pages/login/login.component";
+import {AuthGuard} from "./shared/helpers/auth.guard";
+
 
 const routes: Routes = [
-  { path: 'score/:id', component: ScoreComponent },
-  { path: 'schedule/:idTutor', component: ScheduleComponent},
-  { path: 'calendar', component: CalendarComponent},
-  { path: 'student-home', component:HomeComponent},
-  { path: 'student-valoraciones', component:ValoracionesComponent},
-  { path: 'tutor-seleccionado', component:TutorSeleccionadoComponent},
-  { path: 'edit-profile', component: EditProfileComponent },
-  { path: 'show-profile', component: ShowProfileComponent},
-  { path: 'edit-profile-tutor', component: EditProfileTutorComponent},
-  { path: 'list-tutor', component: ListTutorComponent},
-  { path: 'chat', component: ChatComponent},
-  { path: 'role', component: RoleComponent},
-  {path: '', redirectTo: 'student-home', pathMatch: 'full'},
+  { path: 'score/:id', component: ScoreComponent, canActivate: [AuthGuard] },
+  { path: 'schedule/:idTutor', component: ScheduleComponent, canActivate: [AuthGuard]},
+  { path: 'calendar', component: CalendarComponent,canActivate: [AuthGuard]},
+  { path: 'student-home', component:HomeComponent,canActivate: [AuthGuard]},
+  { path: 'student-valoraciones', component:ValoracionesComponent,canActivate: [AuthGuard]},
+  { path: 'tutor-seleccionado', component:TutorSeleccionadoComponent,canActivate: [AuthGuard]},
+  { path: 'edit-profile', component: EditProfileComponent,canActivate: [AuthGuard] },
+  { path: 'student-profile/:studentProfileId', component: ShowProfileComponent,canActivate: [AuthGuard]},
+  { path: 'edit-profile-tutor', component: EditProfileTutorComponent,canActivate: [AuthGuard]},
+  { path: 'list-tutor', component: ListTutorComponent,canActivate: [AuthGuard]},
+  { path: 'chat', component: ChatComponent,canActivate: [AuthGuard]},
+  { path: 'role', component: RoleComponent,canActivate: [AuthGuard]},
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent},
+  { path: 'register', component: RegisterComponent},
   {path: '**', component: PageNotFoundComponent},
-  {path:'show-profile-tutor', component:ShowProfileTutorComponent}
+
+  {path:'show-profile-tutor', component:ShowProfileTutorComponent,canActivate: [AuthGuard]}
 ];
 
 @NgModule({

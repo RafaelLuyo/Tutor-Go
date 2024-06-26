@@ -1,0 +1,24 @@
+<div class="appointment">
+  <div class="appointment_title">
+    <div>
+      <h2>Architect contract</h2>
+      <p>I,<strong> {{studentProfile.student.studentName}}</strong>, a student of architecture, request the services of mentor <strong>{{publication.mentorProfile.mentor.student.studentName}}</strong> with the following objective</p>
+    </div>
+
+    <img src="https://cdn.discordapp.com/attachments/1149549726748921942/1175477001679818884/logo_arquimentor.png?ex=656b5f44&is=6558ea44&hm=23796b03032d834fbaa607c5ce9373e601b1aa6e6fce06cf22bcc1e2318a75d8&">
+  </div>
+  <div class="appointment_info">
+    <p><strong>Description:</strong><input class="descriptionAppointment" value="Helpp me!!! :c"> </p>
+
+    <p><strong>Student: </strong> {{studentProfile.student.studentName}}</p>
+    <p><strong>Mentor: </strong> {{publication.mentorProfile.mentor.student.studentName}}</p>
+    <p>Fecha: 21/11/2023</p>
+  </div>
+  <div class="appointment_button">
+    <button class="hireB" (click)="openOverlay()" >hire</button>
+    <button class="cancelB" (click)="back()">cancel</button>
+  </div>
+  <div *ngIf="showOverlay">
+    <app-information-window [message]="'The request has been sent to the advisor, you will receive a notification very soon'" (close)="closeOverlay()"></app-information-window>
+  </div>
+</div>
