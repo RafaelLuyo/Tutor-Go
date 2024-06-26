@@ -1,29 +1,26 @@
 <app-header></app-header>
-<div class="container">
-  <h3>Log In</h3>
-  <form [formGroup]="miFormulario" (ngSubmit)="singInAccount()" class="form-add-post">
-
-      <!-- Título del post (podrías agregar más campos si es necesario) -->
+<div class="container mx-auto flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="login-container">
+    <h3 class="login-title">Log In</h3>
+    <form [formGroup]="miFormulario" (ngSubmit)="singInAccount()" class="space-y-6">
+      <!-- Username field -->
       <div class="input-box">
-        <label class="mat-label">Username</label>
+        <label for="username" class="mat-label">Username</label>
         <div class="mat-form-field">
-          <input matInput type="username" placeholder="Username" [(ngModel)]="singIn.username" formControlName="userName" required>
+          <input id="username" matInput type="text" placeholder="Username" [(ngModel)]="singIn.username" formControlName="userName" required>
         </div>
       </div>
-
+      <!-- Password field -->
       <div class="input-box">
-        <label class="mat-label">Password</label>
+        <label for="password" class="mat-label">Password</label>
         <div class="mat-form-field">
-          <input matInput type="password" placeholder="Password" [(ngModel)]="singIn.password" formControlName="password" required>
+          <input id="password" matInput type="password" placeholder="Password" [(ngModel)]="singIn.password" formControlName="password" required>
         </div>
-
-    </div>
-    <div class="content-button">
-      <button type="submit" mat-button>Log in</button>
-    </div>
-  </form>
+      </div>
+      <!-- Submit button -->
+      <div class="content-button">
+        <button type="submit" mat-button>Log in</button>
+      </div>
+    </form>
+  </div>
 </div>
-
-
-
-

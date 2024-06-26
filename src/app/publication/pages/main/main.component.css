@@ -1,42 +1,73 @@
-h1{
-  padding: 20px 60px;
-  font-size: 40px;
-  font-family: "JetBrains Mono ExtraBold";
+/* Estilo para el título */
+h1 {
+  padding: 10px 30px;
+  font-size: 30px;
+  font-family: "JetBrains Mono ExtraBold", monospace;
   color: #0E3026;
+  text-align: center;
+  background-color: #f0f8f7;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
-.content{
+
+/* Estilo para el contenedor principal */
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
 }
-.subtitle{
-  font-size: 25px;
+
+/* Estilo para el subtítulo */
+.subtitle {
+  font-size: 20px;
   color: #565656;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
-.content-publication{
+
+/* Estilo para la sección de publicaciones */
+.content-publication {
   display: flex;
   flex-wrap: wrap;
-
-  padding: 20px;
-}
-.content-button{
-  display: flex;
-  justify-content: end;
-}
-
-.buttons{
-  background-color: #e1bc85;
-  border: 0;
-  border-radius: 8px;
   padding: 10px;
-  font-size: 20px;
-  font-family: Arial, sans-serif;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  margin: 40px;
-  cursor: pointer;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  width: 100%;
 }
-.buttons:hover{
+
+/* Estilo para el contenedor del botón */
+.content-button {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+/* Estilo para el botón */
+.buttons {
+  background-color: #e1bc85;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estilo para el botón al pasar el mouse */
+.buttons:hover {
   background-color: #e8b568;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }

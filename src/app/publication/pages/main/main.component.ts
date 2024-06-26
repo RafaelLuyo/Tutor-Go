@@ -15,7 +15,7 @@ export class MainComponent implements OnInit{
   id: number=0;
   student: Student | undefined;
   constructor(private router:Router,
-              private arquimentorService: PublicationService,
+              private tutorgoService: PublicationService,
               private studentService: StudentService,
               private route: ActivatedRoute) {
     this.route.queryParams.subscribe(params => {
@@ -27,7 +27,7 @@ export class MainComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.arquimentorService.getAll().subscribe((response: any) => {
+    this.tutorgoService.getAll().subscribe((response: any) => {
       this.publicationsA = response;
       console.log(this.publicationsA)
     });
