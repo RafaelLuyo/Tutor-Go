@@ -1,0 +1,41 @@
+<div class="subscription-section">
+  <h1 class="title">Subscribe Now</h1>
+  <h5 class="subtitle">Get the following benefits...</h5>
+  <div class="benefits">
+    <div class="benefit">
+      <img src="https://cdn.discordapp.com/attachments/1149549727197696111/1173742841520980018/4I1B4omBFAAAAABJRU5ErkJggg.png?ex=65651034&is=65529b34&hm=03004fe111447d4a653ddb53f0d9d4e912504d145f3683d4ebccb12dd21d11d9&" alt="Benefit 1">
+      <p class="benefit-text">Post creator for your services</p>
+    </div>
+    <div class="benefit">
+      <img src="https://cdn.discordapp.com/attachments/1149549727197696111/1173742859527147581/images.png?ex=65651038&is=65529b38&hm=9cd8ad5ee3ebd522def7e5896011a29187b1381e9172c44f3d1d7f0c2492e795&" alt="Benefit 2">
+      <p class="benefit-text">Blocking annoying ads</p>
+    </div>
+    <div class="benefit">
+      <img src="https://cdn.discordapp.com/attachments/1149549727197696111/1173743760463630356/PCsrKysrKysrKysrKysrKysrKysrKytuh87v6NPtHaGAAAAABJRU5ErkJggg.png?ex=6565110f&is=65529c0f&hm=690107c485ec5548e0608e5c0ccb9addc2487cd4810256257ad203073fd658de&" alt="Benefit 3">
+      <p class="benefit-text">Show your certificates to everyone</p>
+    </div>
+  </div>
+  <h6 class="subtitle">Choose your plan...</h6>
+
+  <div class="card-container">
+    <div *ngFor="let subscription of subscriptions" class="card">
+      <mat-card>
+        <img [src]="subscription.image" alt="{{ subscription.name }} Image" style="max-width: 100%; ">
+        <mat-card-header>
+          <mat-card-title class="card-title">{{ subscription.name }}</mat-card-title>
+          <mat-card-subtitle class="subscription-price">Price: S/.{{ subscription.price }}/month</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="card-content">
+          {{ subscription.description }}
+        </mat-card-content>
+        <mat-card-actions class="card-actions">
+          <button mat-button class="y-button" *ngIf="subscription.hasButtons" (click)="selectPlan(subscription.numberPlan )" >Subscribe</button>
+<!--
+          <button mat-button class="ye-button" *ngIf="subscription.hasButtons">Unsubscribe</button>
+-->
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+</div>
