@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit{
           localStorage.setItem('token', p.token);
           alert("login iniciado")
 
-          this.router.navigate(['student-home'],{ queryParams: { id: p.id } });
+          this.router.navigate(['home'],{ queryParams: { id: p.id } });
           return p;
         });
       },
