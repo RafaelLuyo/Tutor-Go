@@ -39,7 +39,7 @@ export class HeaderContentComponent implements OnInit{
 
   navigateMentorProfile() {
     this.getStudentProfileId(this.id)
-    this.router.navigate([`mentor-profile/`+this.id],{ queryParams: { id: this.id } });
+    this.router.navigate([`mentor-profiles`],{ queryParams: { id: this.id } });
   }
 
   navigateStudentProfile() {

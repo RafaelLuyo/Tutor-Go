@@ -21,7 +21,7 @@ import {NotificationListComponent} from "./advise/pages/notification-list/notifi
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'student-profile/:studentProfileId', component: StudentProfileComponent,canActivate: [AuthGuard] },
-  { path: 'mentor-profile/:mentorProfileId', component: MentorProfileComponent,canActivate: [AuthGuard] },
+  { path: 'mentor-profiles', component: MentorProfileComponent,canActivate: [AuthGuard] },
   { path: 'publication/:publicationId', component: PublicationIdComponent,canActivate: [AuthGuard] },
   { path: 'home', component: MainComponent,canActivate: [AuthGuard]},
   { path: 'login', component: LoginComponent},
