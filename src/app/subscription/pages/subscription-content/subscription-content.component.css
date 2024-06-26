@@ -1,0 +1,117 @@
+
+.subscription-section {
+  background-color: #e1bc85;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 45px;
+  padding: 30px 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.subtitle{
+  padding: 40px 0;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.benefits {
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.benefit {
+  padding: 30px;
+  flex: 1;
+  margin: 10px;
+}
+
+.benefit img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.benefit-text {
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.subtitle{
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.subscription-price {
+  font-size: 28px;
+  color: #007bff;
+
+  margin: 30px 0;
+}
+
+.subscription-features li {
+  margin: 15px 0;
+}
+
+/*
+subscriptions*/
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 30px 20px;
+  width: 40%;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-actions button {
+  flex: 1;
+  margin: 5px;
+}
+
+.y-button {
+  background-color: #e3bd86;
+  color: white;
+  margin-right: 10px
+}
+.y-button:hover{
+  background: #d3912f;
+  color: #000000;
+  transform: scale(1.02);
+}
+
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card-content {
+  font-family: 'Overpass', sans-serif;
+  font-size: 16px;
+}
