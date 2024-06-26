@@ -23,7 +23,7 @@ export class CreatePostComponent {
   images: any = [];
   private Integer: any;
 
-  constructor(private route: ActivatedRoute, private arquimentorService: PublicationService, private router: Router) {
+  constructor(private route: ActivatedRoute, private tutorgoService: PublicationService, private router: Router) {
     this.publication = {} as Publication;
     this.dataSource = new MatTableDataSource<any>();
 
@@ -36,7 +36,7 @@ export class CreatePostComponent {
 
   createPublication(): void {
     this.publication.id = 0;
-    this.arquimentorService.create(this.publication).subscribe(
+    this.tutorgoService.create(this.publication).subscribe(
       (response: any) => {
         this.dataSource.data.push({...response});
         console.log(this.dataSource)

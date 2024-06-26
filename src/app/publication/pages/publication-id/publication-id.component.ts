@@ -16,7 +16,7 @@ export class PublicationIdComponent implements OnInit{
   linkCount:number | undefined=0;
   viewCount:number | undefined=0;
   id: number=0;
-  constructor(    private arquimentorService: PublicationService,
+  constructor(    private tutorgoService: PublicationService,
                   private route: ActivatedRoute,private router: Router,private location: Location
   ) {
     this.route.queryParams.subscribe(params => {
@@ -27,14 +27,14 @@ export class PublicationIdComponent implements OnInit{
   ngOnInit(): void {
     const publicationId = this.route.snapshot.params['publicationId'];
     this.idPublication = publicationId;
-    this.arquimentorService.incrementView(publicationId).subscribe();
+    this.tutorgoService.incrementView(publicationId).subscribe();
     this.getIdPublication(publicationId);
     const userLiked = localStorage.getItem('userLiked'+publicationId);
     this.liked = userLiked === 'true';
   }
 
   private getIdPublication(publicationId: number) {
-    this.arquimentorService.getPublicationId(publicationId).subscribe((response: any) => {
+    this.tutorgoService.getPublicationId(publicationId).subscribe((response: any) => {
       this.publication = response;
       console.log(this.publication);
       this.linkCount= this.publication?.likes;
@@ -52,7 +52,7 @@ export class PublicationIdComponent implements OnInit{
 
   deletePublication() {
     const id = this.route.snapshot.params['publicationId'];
-    this.arquimentorService.delete(id).subscribe(
+    this.tutorgoService.delete(id).subscribe(
       response => {
         console.log('Recurso eliminado con éxito', response);
       },
@@ -66,7 +66,7 @@ export class PublicationIdComponent implements OnInit{
   incrementLike() {
     if(!this.liked){
       const id = this.route.snapshot.params['publicationId'];
-      this.arquimentorService.incrementLike(id).subscribe(
+      this.tutorgoService.incrementLike(id).subscribe(
         response => {
           console.log('increment like', response);
         },
@@ -83,7 +83,7 @@ export class PublicationIdComponent implements OnInit{
   discountLike() {
     if(this.liked){
       const id = this.route.snapshot.params['publicationId'];
-      this.arquimentorService.discountLike(id).subscribe(
+      this.tutorgoService.discountLike(id).subscribe(
         response => {
           console.log('discount like', response);
         },

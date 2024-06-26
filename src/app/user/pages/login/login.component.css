@@ -1,62 +1,43 @@
-
+/* Container settings */
 .container {
   padding: 50px 0;
   width: 500px;
   background-color: #598d7e;
   margin: 50px auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
 }
 
-h3{
+h3 {
   font-size: 25px;
   font-weight: 600;
   text-align: center;
   padding-top: 10px;
 }
 
-.column p {
-  font-weight: 500;
-  text-align: center;
-  margin: 0.5rem 0 0.5rem 0;
-}
-
-.column span a {
-  color:#E3BD86;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.column span a:hover {
-  color: #0E3026;
-}
-
-form{
+/* Form settings */
+form {
   margin: auto;
-}
-form{
   margin-top: 1rem;
   width: 400px;
 }
 
-.mat-label{
+.mat-label {
   color: #0E3026;
   font-weight: bold;
   font-size: 19px;
   margin: 0 15px;
 }
 
-.input-box{
-  margin:30px 0;
+.input-box {
+  margin: 30px 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
 }
-.mat-form-field{
 
-}
-.input-box input{
+.input-box input {
   background: #fbe3c0;
   border-radius: 62px;
   height: 1rem;
@@ -65,13 +46,14 @@ form{
   border: none;
 }
 
+/* Button settings */
 button {
   background: #d3912f;
   color: #000000;
   font-weight: bold;
   border: none;
   border-radius: 15px;
-  padding: .5rem 3rem;
+  padding: 0.5rem 3rem;
   margin: auto;
   display: block;
   cursor: pointer;
@@ -84,20 +66,20 @@ button:hover {
   transform: scale(1.2);
 }
 
-@media (max-width: 900px){
-  .container{
+@media (max-width: 900px) {
+  .container {
     display: flex;
     align-items: center;
   }
-  .input-box{
+
+  .input-box {
     flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
     color: #0E3026;
     height: 120px;
   }
 
-
-  mat-label{
+  .mat-label {
     color: #0E3026;
     font-size: 20px;
     padding: 30px;

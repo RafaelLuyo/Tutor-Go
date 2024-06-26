@@ -14,7 +14,7 @@
   justify-content: space-around;
 }
 .header{
-  background-color: #144129;
+  background-color: cornflowerblue;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -122,5 +122,5 @@ mat-nav-list :hover{
 
 .content{
   flex: 1 0 auto;
-  background-color: #6f998d;
+  background-color: #f1f1f1;
 }

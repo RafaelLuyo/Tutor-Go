@@ -1,3 +1,4 @@
+
 .appointment {
   border: 1px solid #d7ad6c;
   background-color: #e1bc85;
@@ -11,7 +12,7 @@
   max-width: 800px;
 }
 
-.descriptionAppointment{
+.descriptionAppointment {
   padding: 10px;
   font-size: 15px;
   background-color: transparent; /* Fondo transparente */
@@ -19,29 +20,34 @@
   outline: none; /* Sin contorno al hacer clic */
   color: black; /* Color del texto del input */
 }
-.appointment_title{
+
+.appointment_title {
   margin: 10px 20px;
   display: flex;
   justify-content: space-between;
 }
-.appointment_title img{
+
+.appointment_title img {
   width: 100px;
   height: 100px;
   margin: 10px;
+}
 
+.appointment_info {
+  margin: 5px 30px;
 }
-.appointment_info{
- margin: 5px 30px;
-}
-.appointment_button{
+
+.appointment_button {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
-.appointment_button button{
+
+.appointment_button button {
   margin: 5px 20px;
 }
-.hireB{
+
+.hireB {
   width: 80px;
   background-color: #11791b;
   color: #fff;
@@ -50,11 +56,13 @@
   padding: 10px;
   margin: 5px 20px;
 }
-.hireB:hover{
+
+.hireB:hover {
   background-color: #0a4e0a;
   cursor: pointer;
 }
-.cancelB{
+
+.cancelB {
   width: 80px;
   background-color: #b71c1c;
   color: #fff;
@@ -63,7 +71,10 @@
   padding: 10px;
   margin: 5px 20px;
 }
-.cancelB:hover{
+
+.cancelB:hover {
   background-color: #7f0000;
   cursor: pointer;
 }
+
+

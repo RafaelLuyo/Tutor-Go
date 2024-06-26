@@ -19,7 +19,7 @@ export class AppointmentComponent implements OnInit{
   studentProfile: StudentProfile;
   constructor(private route: ActivatedRoute,
               private router: Router,
-              private arquimentorService: PublicationService,
+              private tutorgoService: PublicationService,
               private studentService: StudentProfileService
               ) {
     // Obtén el parámetro de consulta 'currentUrl'
@@ -34,7 +34,7 @@ export class AppointmentComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.arquimentorService.getPublicationId(Number(this.idPublication)).subscribe( (data: any) => {
+    this.tutorgoService.getPublicationId(Number(this.idPublication)).subscribe( (data: any) => {
       console.log("data de la publicacion");
       if (data != null) {
         this.publication = data;
