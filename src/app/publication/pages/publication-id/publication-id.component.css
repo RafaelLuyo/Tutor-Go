@@ -1,0 +1,242 @@
+.content_id{
+  display: flex;
+  justify-content: center;
+}
+
+
+.card-publication {
+  display: flex;
+  margin: 20px;
+  width: 80%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: #E3BD86;
+}
+.icons_content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+
+}
+.imagen_card_publication{
+  margin: 18px auto;
+  width: 90%;
+  height: 170px;
+  object-fit: cover;
+  display: flex;
+}
+
+.imagen_card_publication img{
+  width: 0;
+  flex-grow: 1;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.modal{
+  margin-top: 30px;
+  position: fixed;
+  width: 400px;
+  background-color: #E3BD86;
+  border-radius: 15px;
+  border-color: #e0b781;
+  box-shadow: 0 4px 8px 0 rgb(173, 144, 99);
+}
+dialog.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.form button{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: #E3BD86;
+  border-radius: 5px;
+  border-color: #e0b781;
+  box-shadow: 0 4px 8px 0 rgb(173, 144, 99);
+}
+form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+.img_modal_content{
+  margin: 20px ;
+
+  width: 40%;
+  min-width: 300px;
+  height: auto;
+}
+.img_modal_content img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 30px;
+}
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal.show {
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+/* Aplicar la animación a la capa de fondo */
+.modal-overlay.show {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.imagen_card_publication_modal{
+  margin: 18px auto;
+  width: 90%;
+  height: 170px;
+  object-fit: cover;
+  display: flex;
+}
+.imagen_card_publication_modal img{
+  width: 0;
+  flex-grow: 1;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.icons_card{
+  display: flex;
+  padding: 0;
+  margin: 0 25px;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+.icons_card mat-icon{
+  margin: 20px 4px;
+  width: 40px;
+  height: 30px;
+  font-size: 30px;
+}
+#like_color{
+  color: #0d1b9b;
+}
+
+.align-center{
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+}
+
+p {
+  margin-top: 20px;
+  font-size: 24px; /* Ajusta el tamaño del texto */
+  font-weight: bold; /* Hace el texto en negrita */
+  text-align: center; /* Centra el texto */
+}
+.icon_asesor{
+  width: 60px;
+  height: 60px;
+}
+.icon_asesor mat-icon{
+  width: 60px;
+  height: 60px;
+  font-size: 60px;
+}
+.add-post-left{
+  width: 40%;
+}
+.add-post-right{
+  width: 60%;
+  margin: 10px;
+}
+
+.title{
+  font-size: 30px;
+  font-family: "Arial Black";
+  padding: 20px 30px;
+}
+
+.description{
+  font-family: Arial;
+  padding: 20px;
+  margin: 0 20px;
+  border-radius: 0px 10px 10px 10px;
+}
+.title_desc{
+  font-family: Arial;
+  font-size: 17px;
+  width: 22%;
+  padding: 5px 20px;
+  margin: 0 20px;
+  border-radius: 10px 10px 0 0;
+}
+.icon_publication{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon_contract{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px;
+}
+
+.icon_contract mat-icon{
+  width: 60px;
+  height: 60px;
+  font-size: 60px;
+}
+.comments{
+  display: flex;
+  align-items: center;
+}
+.icon_message{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 20px;
+  font-size: 40px;
+}
+
+.icon_message mat-icon{
+  width: 60px;
+  height: 60px;
+  font-size: 60px;
+  margin-right: 10px;
+}
+
+.icon_close{
+  float: right;
+}
+.content-button{
+  display: flex;
+  justify-content: end;
+}
+.buttons{
+  background-color: #d7a55d;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+.icon_delete{
+  display: flex;
+  align-items: center;
+  color: red;
+  margin: 30px 50px;
+  font-size: 20px;
+}
+
+
+
+
